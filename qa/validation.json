@@ -1,0 +1,1331 @@
+{
+  "version": "v1",
+  "status": "passed",
+  "svg_assets": 38,
+  "checks_passed": 316,
+  "checks_total": 316,
+  "wordmark_silhouette_iou": 0.9859820527796952,
+  "icon_separation": [
+    {
+      "size": 16,
+      "visible_plane_components": 3,
+      "component_pixels": [
+        14,
+        12,
+        14
+      ]
+    },
+    {
+      "size": 24,
+      "visible_plane_components": 3,
+      "component_pixels": [
+        27,
+        34,
+        28
+      ]
+    },
+    {
+      "size": 32,
+      "visible_plane_components": 3,
+      "component_pixels": [
+        54,
+        56,
+        50
+      ]
+    },
+    {
+      "size": 48,
+      "visible_plane_components": 3,
+      "component_pixels": [
+        130,
+        141,
+        116
+      ]
+    },
+    {
+      "size": 64,
+      "visible_plane_components": 3,
+      "component_pixels": [
+        211,
+        242,
+        206
+      ]
+    },
+    {
+      "size": 128,
+      "visible_plane_components": 3,
+      "component_pixels": [
+        879,
+        930,
+        806
+      ]
+    }
+  ],
+  "failures": [],
+  "checks": [
+    {
+      "passed": true,
+      "check": "Brand version is a valid release tag"
+    },
+    {
+      "passed": true,
+      "check": "Manifest version matches VERSION"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-tagline-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-stacked-tagline-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-server-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-server-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-server-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-server-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-dotnet-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-dotnet-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-dotnet-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-dotnet-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-js-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-js-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-js-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-js-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-python-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-python-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-python-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-python-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-docs-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-docs-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-docs-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-docs-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: no external image, script or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: selected slogan recorded"
+    },
+    {
+      "passed": true,
+      "check": "ICO includes 16, 32, 48, 64, 128 and 256 px frames"
+    },
+    {
+      "passed": true,
+      "check": "ICO preserves the dedicated optical 16 px frame"
+    },
+    {
+      "passed": true,
+      "check": "Outlined wordmark preserves over 98% silhouette overlap with selected lettering"
+    },
+    {
+      "passed": true,
+      "check": "16 px icon: three separate visible planes"
+    },
+    {
+      "passed": true,
+      "check": "24 px icon: three separate visible planes"
+    },
+    {
+      "passed": true,
+      "check": "32 px icon: three separate visible planes"
+    },
+    {
+      "passed": true,
+      "check": "48 px icon: three separate visible planes"
+    },
+    {
+      "passed": true,
+      "check": "64 px icon: three separate visible planes"
+    },
+    {
+      "passed": true,
+      "check": "128 px icon: three separate visible planes"
+    }
+  ]
+}

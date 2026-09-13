@@ -1,0 +1,14 @@
+{
+  "brand": "Briosa",
+  "colors": {
+    "blue": "#003875",
+    "cyan": "#00BAF1",
+    "graphite": "#585B62",
+    "silver": "#F2F2F2",
+    "white": "#FFFFFF"
+  },
+  "text_on_light": "#585B62",
+  "link_on_light": "#003875",
+  "text_on_dark": "#FFFFFF",
+  "accent_on_dark": "#00BAF1"
+}

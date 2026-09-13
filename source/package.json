@@ -1,0 +1,6 @@
+{
+  "name": "briosa-brand-exports",
+  "private": true,
+  "description": "Local renderer for the Briosa vector brand pack",
+  "dependencies": { "sharp": "0.35.4" }
+}

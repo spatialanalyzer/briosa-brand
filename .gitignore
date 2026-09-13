@@ -1,0 +1,14 @@
+# Generated release exports
+/dist/
+/png/
+/icons/*.png
+/icons/*.ico
+/SHA256SUMS.txt
+
+# Local dependencies and caches
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">Briosa application icon</title>
+<desc id="desc">Briosa application icon</desc>
+<rect x="0" y="0" width="1024" height="1024" rx="0" fill="#003875"/><path data-plane="left" fill="#FFFFFF" d="M232,574.4197 L484,428.9274 L484,596.9274 L232,742.4197 Z"/>
+<path data-plane="upper" fill="#00BAF1" d="M512,241.9197 L666,330.8316 L666,589.8316 L512,500.9197 Z"/>
+<path data-plane="lower" fill="#F2F2F2" d="M435,668.9197 L596,575.9663 L792,689.1269 L631,782.0803 Z"/>
+</svg>
