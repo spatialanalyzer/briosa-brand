@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
 <title id="title">Briosa application icon</title>
 <desc id="desc">Briosa application icon</desc>
-<rect x="0" y="0" width="1024" height="1024" rx="180" fill="#003875"/><path data-plane="left" fill="#FFFFFF" d="M182,585.566 L479,414.093 L479,612.093 L182,783.566 Z"/>
-<path data-plane="upper" fill="#00BAF1" d="M512,193.691 L693.5,298.4801 L693.5,603.7301 L512,498.941 Z"/>
-<path data-plane="lower" fill="#F2F2F2" d="M421.25,696.941 L611,587.3888 L842,720.7567 L652.25,830.309 Z"/>
+<rect x="0" y="0" width="1024" height="1024" rx="228.5714" fill="#040B17"/><path data-part="edge" fill="#223A53" fill-rule="evenodd" d="M228.5714 0H795.4286A228.5714 228.5714 0 0 1 1024 228.5714V795.4286A228.5714 228.5714 0 0 1 795.4286 1024H228.5714A228.5714 228.5714 0 0 1 0 795.4286V228.5714A228.5714 228.5714 0 0 1 228.5714 0ZM228.5714 9.1429H795.4286A219.4286 219.4286 0 0 1 1014.8571 228.5714V795.4286A219.4286 219.4286 0 0 1 795.4286 1014.8571H228.5714A219.4286 219.4286 0 0 1 9.1429 795.4286V228.5714A219.4286 219.4286 0 0 1 228.5714 9.1429Z"/>
+<g data-part="briosa-mark" transform="translate(137.1429 137.1429) scale(2.9286)"><path data-part="ticks" fill="#9DB3CF" d="M43 48.5H63V55.5H43ZM43 88.5H63V95.5H43ZM43 128.5H63V135.5H43ZM43 168.5H63V175.5H43Z"/><path data-part="beam" fill="#EAF3FF" d="M76 19V227H168V197H106V19Z"/><path data-part="jaw" fill="#00BAF1" d="M116 135H182V187H212V105H116Z"/><circle data-part="point" cx="144" cy="166" r="15" fill="#8BE7FF"/></g>
 </svg>

@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
-<title id="title">Briosa application icon</title>
-<desc id="desc">Briosa application icon</desc>
-<rect x="0" y="0" width="1024" height="1024" rx="180" fill="#003875"/><path data-plane="left" fill="#FFFFFF" d="M182,590.8588 L468.2651,425.5836 L468.2651,616.427 L182,781.7022 Z"/>
-<path data-plane="upper" fill="#00BAF1" d="M523.9277,189.2926 L698.8675,290.2941 L698.8675,584.511 L523.9277,483.5094 Z"/>
-<path data-plane="lower" fill="#F2F2F2" d="M436.4578,706.16 L619.3494,600.5675 L842,729.1149 L659.1084,834.7074 Z"/>
+<title id="title">Briosa favicon</title>
+<desc id="desc">Briosa favicon</desc>
+<rect x="0" y="0" width="1024" height="1024" rx="228.5714" fill="#040B17"/>
+<g data-part="briosa-mark" transform="translate(9.8462 27.5692) scale(3.9385)"><path data-part="ticks" fill="#9DB3CF" d="M43 48.5H63V55.5H43ZM43 88.5H63V95.5H43ZM43 128.5H63V135.5H43ZM43 168.5H63V175.5H43Z"/><path data-part="beam" fill="#EAF3FF" d="M76 19V227H168V197H106V19Z"/><path data-part="jaw" fill="#00BAF1" d="M116 135H182V187H212V105H116Z"/><circle data-part="point" cx="144" cy="166" r="15" fill="#8BE7FF"/></g>
 </svg>

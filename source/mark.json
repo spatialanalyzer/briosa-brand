@@ -1,0 +1,217 @@
+{
+  "description": "Caliper b: a lowercase b drawn as a caliper. The beam carries vernier ticks; the jaw slides down the beam and closes on the measured point.",
+  "grid": 256,
+  "point": [
+    129,
+    166
+  ],
+  "cuts": {
+    "large": {
+      "use": "64 px and up",
+      "translate": [
+        12,
+        0
+      ],
+      "ticks": {
+        "d": "M38 40H56M46 52H56M46 64H56M46 76H56M38 88H56M46 100H56M46 112H56M46 124H56M38 136H56M46 148H56M46 160H56M46 172H56M38 184H56M46 196H56",
+        "stroke_width": 3,
+        "linecap": "butt"
+      },
+      "beam": {
+        "points": [
+          [
+            76,
+            34
+          ],
+          [
+            76,
+            212
+          ],
+          [
+            140,
+            212
+          ]
+        ],
+        "stroke_width": 24,
+        "linecap": "square",
+        "linejoin": "miter"
+      },
+      "jaw": {
+        "points": [
+          [
+            112,
+            120
+          ],
+          [
+            182,
+            120
+          ],
+          [
+            182,
+            176
+          ]
+        ],
+        "stroke_width": 24,
+        "linecap": "square",
+        "linejoin": "miter"
+      },
+      "point_radius": 9.5,
+      "ink_bounds": [
+        50.0,
+        22.0,
+        206.0,
+        224.0
+      ]
+    },
+    "small": {
+      "use": "16 to 48 px, app icons and favicons",
+      "translate": [
+        15,
+        0
+      ],
+      "ticks": {
+        "d": "M28 52H48M28 92H48M28 132H48M28 172H48",
+        "stroke_width": 7,
+        "linecap": "butt"
+      },
+      "beam": {
+        "points": [
+          [
+            76,
+            34
+          ],
+          [
+            76,
+            212
+          ],
+          [
+            138,
+            212
+          ]
+        ],
+        "stroke_width": 30,
+        "linecap": "square",
+        "linejoin": "miter"
+      },
+      "jaw": {
+        "points": [
+          [
+            116,
+            120
+          ],
+          [
+            182,
+            120
+          ],
+          [
+            182,
+            172
+          ]
+        ],
+        "stroke_width": 30,
+        "linecap": "square",
+        "linejoin": "miter"
+      },
+      "point_radius": 15,
+      "ink_bounds": [
+        43.0,
+        19.0,
+        212.0,
+        227.0
+      ]
+    }
+  },
+  "glow": {
+    "inverse": {
+      "r": 26,
+      "opacity": 0.2,
+      "color": "#00BAF1"
+    },
+    "color": {
+      "r": 24,
+      "opacity": 0.16,
+      "color": "#00BAF1"
+    },
+    "cut": "large"
+  },
+  "colors": {
+    "color": {
+      "beam": "#061A33",
+      "jaw": "#0096D6",
+      "ticks": {
+        "large": "#536C8C",
+        "small": "#536C8C"
+      },
+      "point": {
+        "large": "#0096D6",
+        "small": "#0096D6"
+      }
+    },
+    "inverse": {
+      "beam": "#EAF3FF",
+      "jaw": "#00BAF1",
+      "ticks": {
+        "large": "#7690B0",
+        "small": "#9DB3CF"
+      },
+      "point": {
+        "large": "#FFFFFF",
+        "small": "#8BE7FF"
+      }
+    },
+    "black": {
+      "beam": "#000000",
+      "jaw": "#000000",
+      "ticks": {
+        "large": "#000000",
+        "small": "#000000"
+      },
+      "point": {
+        "large": "#000000",
+        "small": "#000000"
+      }
+    },
+    "white": {
+      "beam": "#FFFFFF",
+      "jaw": "#FFFFFF",
+      "ticks": {
+        "large": "#FFFFFF",
+        "small": "#FFFFFF"
+      },
+      "point": {
+        "large": "#FFFFFF",
+        "small": "#FFFFFF"
+      }
+    }
+  },
+  "motion": {
+    "jaw": {
+      "from_translate_y": -60,
+      "easing": "cubic-bezier(.6,0,.3,1)"
+    },
+    "ring": {
+      "r": {
+        "large": 16,
+        "small": 15
+      },
+      "stroke_width": {
+        "large": 3,
+        "small": "1.25px non-scaling"
+      },
+      "color": {
+        "inverse": "#8BE7FF",
+        "color": "#0096D6"
+      }
+    },
+    "once": {
+      "jaw": "1.1s, delay .3s",
+      "ring": ".9s cubic-bezier(.2,.8,.2,1), delay 1.2s, scale 1 to 2.7, opacity .95 to 0"
+    },
+    "loop": {
+      "duration": "5s",
+      "jaw": "closes by 30%, holds to 84%, reopens at 100%",
+      "ring": "opacity .9 at 32%, scale 2.3 and opacity 0 by 62%"
+    },
+    "reduced_motion": "Show the closed mark without animation."
+  }
+}

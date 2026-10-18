@@ -1,14 +1,111 @@
 {
   "brand": "Briosa",
+  "version": "v2.0.0",
   "colors": {
-    "blue": "#003875",
-    "cyan": "#00BAF1",
-    "graphite": "#585B62",
-    "silver": "#F2F2F2",
-    "white": "#FFFFFF"
+    "void": "#040B17",
+    "clean-room": "#F3F7FB",
+    "dark-ink": "#EAF3FF",
+    "dark-ink-2": "#9DB3CF",
+    "dark-ink-3": "#7690B0",
+    "dark-jaw": "#00BAF1",
+    "dark-point": "#FFFFFF",
+    "dark-point-small": "#8BE7FF",
+    "dark-edge": "#223A53",
+    "light-ink": "#061A33",
+    "light-ink-2": "#46607E",
+    "light-ink-3": "#536C8C",
+    "light-jaw": "#0096D6",
+    "light-link": "#006DB6",
+    "light-edge": "#D6E2EE",
+    "light-line": "#B9C9DB"
   },
-  "text_on_light": "#585B62",
-  "link_on_light": "#003875",
-  "text_on_dark": "#FFFFFF",
-  "accent_on_dark": "#00BAF1"
+  "themes": {
+    "dark": {
+      "ground": "#040B17",
+      "ink": "#EAF3FF",
+      "ink-2": "#9DB3CF",
+      "ink-3": "#7690B0",
+      "accent": "#00BAF1",
+      "accent-core": "#8BE7FF",
+      "line": "#223A53",
+      "deviation": {
+        "n2": "#3E5BFF",
+        "n1": "#00BAF1",
+        "0": "#34F5C5",
+        "p1": "#FFD23F",
+        "p2": "#FF4D6D"
+      }
+    },
+    "light": {
+      "ground": "#F3F7FB",
+      "ink": "#061A33",
+      "ink-2": "#46607E",
+      "ink-3": "#536C8C",
+      "accent": "#0096D6",
+      "link": "#006DB6",
+      "line": "#B9C9DB",
+      "edge": "#D6E2EE",
+      "deviation": {
+        "n2": "#2E47D9",
+        "n1": "#0096D6",
+        "0": "#10A985",
+        "p1": "#D99A00",
+        "p2": "#DE2F55"
+      }
+    }
+  },
+  "mark": {
+    "color": {
+      "beam": "#061A33",
+      "jaw": "#0096D6",
+      "ticks": {
+        "large": "#536C8C",
+        "small": "#536C8C"
+      },
+      "point": {
+        "large": "#0096D6",
+        "small": "#0096D6"
+      }
+    },
+    "inverse": {
+      "beam": "#EAF3FF",
+      "jaw": "#00BAF1",
+      "ticks": {
+        "large": "#7690B0",
+        "small": "#9DB3CF"
+      },
+      "point": {
+        "large": "#FFFFFF",
+        "small": "#8BE7FF"
+      }
+    },
+    "black": {
+      "beam": "#000000",
+      "jaw": "#000000",
+      "ticks": {
+        "large": "#000000",
+        "small": "#000000"
+      },
+      "point": {
+        "large": "#000000",
+        "small": "#000000"
+      }
+    },
+    "white": {
+      "beam": "#FFFFFF",
+      "jaw": "#FFFFFF",
+      "ticks": {
+        "large": "#FFFFFF",
+        "small": "#FFFFFF"
+      },
+      "point": {
+        "large": "#FFFFFF",
+        "small": "#FFFFFF"
+      }
+    }
+  },
+  "translucent": {
+    "dark-edge": "rgba(120,190,255,.26) on void",
+    "light-line": "rgba(0,56,117,.24) on clean room"
+  }
 }

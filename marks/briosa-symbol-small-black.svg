@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Briosa symbol — small cut — black</title>
+<desc id="desc">Briosa symbol — small cut — black</desc>
+<g data-part="briosa-mark"><path data-part="ticks" fill="#000000" d="M43 48.5H63V55.5H43ZM43 88.5H63V95.5H43ZM43 128.5H63V135.5H43ZM43 168.5H63V175.5H43Z"/><path data-part="beam" fill="#000000" d="M76 19V227H168V197H106V19Z"/><path data-part="jaw" fill="#000000" d="M116 135H182V187H212V105H116Z"/><circle data-part="point" cx="144" cy="166" r="15" fill="#000000"/></g>
+</svg>
