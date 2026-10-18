@@ -1,64 +1,120 @@
 {
-  "version": "v1",
+  "version": "v2.0.0",
   "status": "passed",
-  "svg_assets": 38,
-  "checks_passed": 316,
-  "checks_total": 316,
-  "wordmark_silhouette_iou": 0.9859820527796952,
-  "icon_separation": [
+  "svg_assets": 51,
+  "checks_passed": 591,
+  "checks_total": 591,
+  "wordmark_silhouette_iou": 0.98816200515172,
+  "icon_legibility": [
     {
       "size": 16,
-      "visible_plane_components": 3,
-      "component_pixels": [
-        14,
-        12,
-        14
-      ]
+      "jaw_components": 1,
+      "beam_components": 1,
+      "jaw_pixels": 14,
+      "beam_pixels": 17,
+      "point_pixels": 0,
+      "jaw_and_beam_separate": true
     },
     {
       "size": 24,
-      "visible_plane_components": 3,
-      "component_pixels": [
-        27,
-        34,
-        28
-      ]
+      "jaw_components": 1,
+      "beam_components": 1,
+      "jaw_pixels": 33,
+      "beam_pixels": 46,
+      "point_pixels": 2,
+      "jaw_and_beam_separate": true
     },
     {
       "size": 32,
-      "visible_plane_components": 3,
-      "component_pixels": [
-        54,
-        56,
-        50
-      ]
+      "jaw_components": 1,
+      "beam_components": 1,
+      "jaw_pixels": 54,
+      "beam_pixels": 110,
+      "point_pixels": 6,
+      "jaw_and_beam_separate": true
     },
     {
       "size": 48,
-      "visible_plane_components": 3,
-      "component_pixels": [
-        130,
-        141,
-        116
-      ]
+      "jaw_components": 1,
+      "beam_components": 1,
+      "jaw_pixels": 69,
+      "beam_pixels": 136,
+      "point_pixels": 8,
+      "jaw_and_beam_separate": true
     },
     {
       "size": 64,
-      "visible_plane_components": 3,
-      "component_pixels": [
-        211,
-        242,
-        206
-      ]
+      "jaw_components": 1,
+      "beam_components": 1,
+      "jaw_pixels": 135,
+      "beam_pixels": 245,
+      "point_pixels": 16,
+      "jaw_and_beam_separate": true
     },
     {
       "size": 128,
-      "visible_plane_components": 3,
-      "component_pixels": [
-        879,
-        930,
-        806
-      ]
+      "jaw_components": 1,
+      "beam_components": 1,
+      "jaw_pixels": 559,
+      "beam_pixels": 1056,
+      "point_pixels": 82,
+      "jaw_and_beam_separate": true
+    }
+  ],
+  "contrast": [
+    {
+      "foreground": "dark-ink",
+      "background": "void",
+      "ratio": 17.61,
+      "minimum": 7
+    },
+    {
+      "foreground": "dark-ink-2",
+      "background": "void",
+      "ratio": 9.18,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "dark-ink-3",
+      "background": "void",
+      "ratio": 5.99,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "dark-jaw",
+      "background": "void",
+      "ratio": 8.72,
+      "minimum": 3
+    },
+    {
+      "foreground": "light-ink",
+      "background": "clean-room",
+      "ratio": 16.21,
+      "minimum": 7
+    },
+    {
+      "foreground": "light-ink-2",
+      "background": "clean-room",
+      "ratio": 6.03,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "light-ink-3",
+      "background": "clean-room",
+      "ratio": 5.01,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "light-link",
+      "background": "clean-room",
+      "ratio": 5.05,
+      "minimum": 4.5
+    },
+    {
+      "foreground": "light-jaw",
+      "background": "clean-room",
+      "ratio": 3.08,
+      "minimum": 3
     }
   ],
   "failures": [],
@@ -81,7 +137,7 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-color.svg: no external image, script or font dependency"
+      "check": "marks/briosa-symbol-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -93,7 +149,19 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-color.svg: superseded slogan absent"
+      "check": "marks/briosa-symbol-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -105,6 +173,50 @@
     },
     {
       "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-color.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-wordmark-color.svg: vector-only content"
     },
     {
@@ -113,7 +225,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-color.svg: no external image, script or font dependency"
+      "check": "logos/briosa-wordmark-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -125,7 +237,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-color.svg: superseded slogan absent"
+      "check": "logos/briosa-wordmark-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -137,6 +261,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-color.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-horizontal-color.svg: vector-only content"
     },
     {
@@ -145,7 +313,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-color.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -157,7 +325,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-color.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -177,7 +357,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-color.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-tagline-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -189,7 +369,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-color.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-tagline-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -213,7 +405,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-color.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -225,7 +417,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-color.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -245,7 +449,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-color.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-tagline-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -257,7 +461,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-color.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-tagline-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -273,6 +489,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-color.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "marks/briosa-symbol-inverse.svg: vector-only content"
     },
     {
@@ -281,7 +541,7 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-inverse.svg: no external image, script or font dependency"
+      "check": "marks/briosa-symbol-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -293,7 +553,19 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-inverse.svg: superseded slogan absent"
+      "check": "marks/briosa-symbol-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -305,6 +577,50 @@
     },
     {
       "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-inverse.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-wordmark-inverse.svg: vector-only content"
     },
     {
@@ -313,7 +629,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-inverse.svg: no external image, script or font dependency"
+      "check": "logos/briosa-wordmark-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -325,7 +641,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-inverse.svg: superseded slogan absent"
+      "check": "logos/briosa-wordmark-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -337,6 +665,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-inverse.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-horizontal-inverse.svg: vector-only content"
     },
     {
@@ -345,7 +717,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-inverse.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -357,7 +729,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-inverse.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -377,7 +761,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-inverse.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -389,7 +773,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-inverse.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -413,7 +809,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-inverse.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -425,7 +821,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-inverse.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -445,7 +853,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-inverse.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-tagline-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -457,7 +865,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-inverse.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-tagline-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -473,6 +893,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-inverse.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "marks/briosa-symbol-black.svg: vector-only content"
     },
     {
@@ -481,7 +945,7 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-black.svg: no external image, script or font dependency"
+      "check": "marks/briosa-symbol-black.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -493,7 +957,19 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-black.svg: superseded slogan absent"
+      "check": "marks/briosa-symbol-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-black.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -505,6 +981,50 @@
     },
     {
       "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-black.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-wordmark-black.svg: vector-only content"
     },
     {
@@ -513,7 +1033,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-black.svg: no external image, script or font dependency"
+      "check": "logos/briosa-wordmark-black.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -525,7 +1045,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-black.svg: superseded slogan absent"
+      "check": "logos/briosa-wordmark-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-black.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -537,6 +1069,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-black.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-horizontal-black.svg: vector-only content"
     },
     {
@@ -545,7 +1121,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-black.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-black.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -557,7 +1133,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-black.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-black.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -577,7 +1165,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-black.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-tagline-black.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -589,7 +1177,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-black.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-tagline-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-black.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -613,7 +1213,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-black.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-black.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -625,7 +1225,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-black.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-black.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -645,7 +1257,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-black.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-tagline-black.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -657,7 +1269,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-black.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-tagline-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-black.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -673,6 +1297,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-black.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "marks/briosa-symbol-white.svg: vector-only content"
     },
     {
@@ -681,7 +1349,7 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-white.svg: no external image, script or font dependency"
+      "check": "marks/briosa-symbol-white.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -693,7 +1361,19 @@
     },
     {
       "passed": true,
-      "check": "marks/briosa-symbol-white.svg: superseded slogan absent"
+      "check": "marks/briosa-symbol-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-white.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -705,6 +1385,50 @@
     },
     {
       "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "marks/briosa-symbol-small-white.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\marks\\briosa-symbol-small-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-wordmark-white.svg: vector-only content"
     },
     {
@@ -713,7 +1437,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-white.svg: no external image, script or font dependency"
+      "check": "logos/briosa-wordmark-white.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -725,7 +1449,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-wordmark-white.svg: superseded slogan absent"
+      "check": "logos/briosa-wordmark-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-white.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -737,6 +1473,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-wordmark-ruled-white.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-wordmark-ruled-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "logos/briosa-horizontal-white.svg: vector-only content"
     },
     {
@@ -745,7 +1525,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-white.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-white.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -757,7 +1537,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-white.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-white.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -777,7 +1569,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-white.svg: no external image, script or font dependency"
+      "check": "logos/briosa-horizontal-tagline-white.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -789,7 +1581,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-horizontal-tagline-white.svg: superseded slogan absent"
+      "check": "logos/briosa-horizontal-tagline-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-tagline-white.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -813,7 +1617,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-white.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-white.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -825,7 +1629,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-white.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-white.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -845,7 +1661,7 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-white.svg: no external image, script or font dependency"
+      "check": "logos/briosa-stacked-tagline-white.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -857,7 +1673,19 @@
     },
     {
       "passed": true,
-      "check": "logos/briosa-stacked-tagline-white.svg: superseded slogan absent"
+      "check": "logos/briosa-stacked-tagline-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-stacked-tagline-white.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -873,6 +1701,50 @@
     },
     {
       "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "logos/briosa-horizontal-compact-white.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\logos\\briosa-horizontal-compact-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
       "check": "suite/briosa-server-color.svg: vector-only content"
     },
     {
@@ -881,7 +1753,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-server-color.svg: no external image, script or font dependency"
+      "check": "suite/briosa-server-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -893,7 +1765,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-server-color.svg: superseded slogan absent"
+      "check": "suite/briosa-server-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -913,7 +1797,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-server-inverse.svg: no external image, script or font dependency"
+      "check": "suite/briosa-server-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -925,7 +1809,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-server-inverse.svg: superseded slogan absent"
+      "check": "suite/briosa-server-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-server-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -945,7 +1841,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-dotnet-color.svg: no external image, script or font dependency"
+      "check": "suite/briosa-dotnet-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -957,7 +1853,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-dotnet-color.svg: superseded slogan absent"
+      "check": "suite/briosa-dotnet-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -977,7 +1885,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-dotnet-inverse.svg: no external image, script or font dependency"
+      "check": "suite/briosa-dotnet-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -989,7 +1897,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-dotnet-inverse.svg: superseded slogan absent"
+      "check": "suite/briosa-dotnet-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-dotnet-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1009,7 +1929,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-js-color.svg: no external image, script or font dependency"
+      "check": "suite/briosa-js-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1021,7 +1941,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-js-color.svg: superseded slogan absent"
+      "check": "suite/briosa-js-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1041,7 +1973,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-js-inverse.svg: no external image, script or font dependency"
+      "check": "suite/briosa-js-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1053,7 +1985,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-js-inverse.svg: superseded slogan absent"
+      "check": "suite/briosa-js-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-js-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1073,7 +2017,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-python-color.svg: no external image, script or font dependency"
+      "check": "suite/briosa-python-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1085,7 +2029,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-python-color.svg: superseded slogan absent"
+      "check": "suite/briosa-python-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1105,7 +2061,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-python-inverse.svg: no external image, script or font dependency"
+      "check": "suite/briosa-python-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1117,7 +2073,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-python-inverse.svg: superseded slogan absent"
+      "check": "suite/briosa-python-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-python-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1137,7 +2105,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-docs-color.svg: no external image, script or font dependency"
+      "check": "suite/briosa-docs-color.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1149,7 +2117,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-docs-color.svg: superseded slogan absent"
+      "check": "suite/briosa-docs-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-color.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1169,7 +2149,7 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-docs-inverse.svg: no external image, script or font dependency"
+      "check": "suite/briosa-docs-inverse.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1181,7 +2161,19 @@
     },
     {
       "passed": true,
-      "check": "suite/briosa-docs-inverse.svg: superseded slogan absent"
+      "check": "suite/briosa-docs-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-docs-inverse.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1201,7 +2193,7 @@
     },
     {
       "passed": true,
-      "check": "icons/app-icon.svg: no external image, script or font dependency"
+      "check": "icons/app-icon.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1213,7 +2205,55 @@
     },
     {
       "passed": true,
-      "check": "icons/app-icon.svg: superseded slogan absent"
+      "check": "icons/app-icon.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-light.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1225,7 +2265,7 @@
     },
     {
       "passed": true,
-      "check": "icons/app-icon-maskable.svg: no external image, script or font dependency"
+      "check": "icons/app-icon-maskable.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1237,7 +2277,19 @@
     },
     {
       "passed": true,
-      "check": "icons/app-icon-maskable.svg: superseded slogan absent"
+      "check": "icons/app-icon-maskable.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "icons/app-icon-maskable.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1249,7 +2301,7 @@
     },
     {
       "passed": true,
-      "check": "icons/favicon.svg: no external image, script or font dependency"
+      "check": "icons/favicon.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1261,7 +2313,19 @@
     },
     {
       "passed": true,
-      "check": "icons/favicon.svg: superseded slogan absent"
+      "check": "icons/favicon.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "icons/favicon.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1273,7 +2337,7 @@
     },
     {
       "passed": true,
-      "check": "source/briosa-master.svg: no external image, script or font dependency"
+      "check": "source/briosa-master.svg: no external image, script, style or font dependency"
     },
     {
       "passed": true,
@@ -1285,7 +2349,19 @@
     },
     {
       "passed": true,
-      "check": "source/briosa-master.svg: superseded slogan absent"
+      "check": "source/briosa-master.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "source/briosa-master.svg: v1 artwork and superseded slogan absent"
     },
     {
       "passed": true,
@@ -1297,35 +2373,115 @@
     },
     {
       "passed": true,
-      "check": "ICO preserves the dedicated optical 16 px frame"
+      "check": "ICO preserves the dedicated favicon 16 px frame"
     },
     {
       "passed": true,
-      "check": "Outlined wordmark preserves over 98% silhouette overlap with selected lettering"
+      "check": "Outlined wordmark matches FreeType's Saira rendering with over 98% silhouette overlap"
     },
     {
       "passed": true,
-      "check": "16 px icon: three separate visible planes"
+      "check": "16 px icon: one solid jaw and one solid beam"
     },
     {
       "passed": true,
-      "check": "24 px icon: three separate visible planes"
+      "check": "16 px icon: jaw stays clear of the beam"
     },
     {
       "passed": true,
-      "check": "32 px icon: three separate visible planes"
+      "check": "24 px icon: one solid jaw and one solid beam"
     },
     {
       "passed": true,
-      "check": "48 px icon: three separate visible planes"
+      "check": "24 px icon: jaw stays clear of the beam"
     },
     {
       "passed": true,
-      "check": "64 px icon: three separate visible planes"
+      "check": "24 px icon: measured point visible"
     },
     {
       "passed": true,
-      "check": "128 px icon: three separate visible planes"
+      "check": "32 px icon: one solid jaw and one solid beam"
+    },
+    {
+      "passed": true,
+      "check": "32 px icon: jaw stays clear of the beam"
+    },
+    {
+      "passed": true,
+      "check": "32 px icon: measured point visible"
+    },
+    {
+      "passed": true,
+      "check": "48 px icon: one solid jaw and one solid beam"
+    },
+    {
+      "passed": true,
+      "check": "48 px icon: jaw stays clear of the beam"
+    },
+    {
+      "passed": true,
+      "check": "48 px icon: measured point visible"
+    },
+    {
+      "passed": true,
+      "check": "64 px icon: one solid jaw and one solid beam"
+    },
+    {
+      "passed": true,
+      "check": "64 px icon: jaw stays clear of the beam"
+    },
+    {
+      "passed": true,
+      "check": "64 px icon: measured point visible"
+    },
+    {
+      "passed": true,
+      "check": "128 px icon: one solid jaw and one solid beam"
+    },
+    {
+      "passed": true,
+      "check": "128 px icon: jaw stays clear of the beam"
+    },
+    {
+      "passed": true,
+      "check": "128 px icon: measured point visible"
+    },
+    {
+      "passed": true,
+      "check": "dark-ink on void: contrast 17.61:1 meets 7:1"
+    },
+    {
+      "passed": true,
+      "check": "dark-ink-2 on void: contrast 9.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark-ink-3 on void: contrast 5.99:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark-jaw on void: contrast 8.72:1 meets 3:1"
+    },
+    {
+      "passed": true,
+      "check": "light-ink on clean-room: contrast 16.21:1 meets 7:1"
+    },
+    {
+      "passed": true,
+      "check": "light-ink-2 on clean-room: contrast 6.03:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light-ink-3 on clean-room: contrast 5.01:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light-link on clean-room: contrast 5.05:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light-jaw on clean-room: contrast 3.08:1 meets 3:1"
     }
   ]
 }

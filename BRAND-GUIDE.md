@@ -2,60 +2,176 @@
 
 **SpatialAnalyzer integration, simplified.**
 
-Brand version: **v1**. [Download the complete release pack](https://github.com/spatialanalyzer/briosa-brand/releases/download/v1/briosa-brand-v1.zip).
+Brand version: **v2.0.0**. [Download the complete release pack](https://github.com/spatialanalyzer/briosa-brand/releases/download/v2.0.0/briosa-brand-v2.0.0.zip).
 
 ![Briosa identity overview](preview.png)
 
-The selected identity combines the three-plane symbol, the custom Briosa wordmark, and a blue/cyan/gray palette. The deliverable logos are vector paths, including the slogan and product labels. They need no installed fonts or external resources.
+The identity is **Caliper b**: a lowercase b drawn as a caliper. Its beam carries vernier ticks, and a cyan jaw slides down the beam and closes on a measured point in the bowl of the b. The wordmark is **BRIOSA** in wide Saira capitals, with an optional vernier rule beneath it. The palette is dark-first: the mark is designed on void, `#040B17`, and has a matched light version for clean-room surfaces, `#F3F7FB`.
+
+Every deliverable is vector paths and shapes, including the wordmark, slogan and product labels. No installed font or external resource is needed.
 
 ## Choose an Asset
 
 | Use | File |
 | --- | --- |
-| General logo on white | [Horizontal color logo](logos/briosa-horizontal-color.svg) |
-| General logo on deep blue | [Horizontal inverse logo](logos/briosa-horizontal-inverse.svg) |
-| Website hero or presentation with the slogan | [Stacked color logo with slogan](logos/briosa-stacked-tagline-color.svg) |
-| Dark hero or cover with the slogan | [Stacked inverse logo with slogan](logos/briosa-stacked-tagline-inverse.svg) |
-| Wide introduction with the slogan | [Horizontal color logo with slogan](logos/briosa-horizontal-tagline-color.svg) |
-| Wordmark by itself | [Color wordmark](logos/briosa-wordmark-color.svg) |
-| Avatar or compact product identity | [Color symbol](marks/briosa-symbol-color.svg) |
-| Browser tab | [Favicon SVG](icons/favicon.svg), or the multisize ICO included in the release pack |
-| Rounded application icon | [App icon SVG](icons/app-icon.svg) |
-| OS-managed icon shape | [Square maskable icon SVG](icons/app-icon-maskable.svg) |
+| General logo on dark | [Horizontal inverse logo](logos/briosa-horizontal-inverse.svg) |
+| General logo on light | [Horizontal color logo](logos/briosa-horizontal-color.svg) |
+| Navigation bars, app headers, footers, under 250 px wide | [Compact horizontal logo](logos/briosa-horizontal-compact-inverse.svg) ([color](logos/briosa-horizontal-compact-color.svg)) |
+| Splash screen, cover or hero | [Stacked inverse logo](logos/briosa-stacked-inverse.svg) |
+| Hero or cover with the slogan | [Stacked logo with slogan](logos/briosa-stacked-tagline-inverse.svg) |
+| Wide introduction with the slogan | [Horizontal logo with slogan](logos/briosa-horizontal-tagline-inverse.svg) |
+| Wordmark by itself | [Wordmark](logos/briosa-wordmark-inverse.svg), or [with the vernier rule](logos/briosa-wordmark-ruled-inverse.svg) |
+| Avatar or symbol, 64 px and up | [Symbol, large cut](marks/briosa-symbol-inverse.svg) |
+| Symbol below 64 px | [Symbol, small cut](marks/briosa-symbol-small-inverse.svg) |
+| Browser tab | [Favicon SVG](icons/favicon.svg), or the multisize ICO in the release pack |
+| Application icon | [Dark tile](icons/app-icon.svg) or [light tile](icons/app-icon-light.svg) |
+| OS-masked icon shape | [Full-bleed maskable icon](icons/app-icon-maskable.svg) |
 
-Every general logo arrangement also has `black` and `white` versions for one-color use. PNG counterparts are in `png/` with matching filenames. Transparent white artwork is intended for a dark background. The SVG canvas includes a small safety margin; retain additional clear space in the surrounding layout.
+`inverse` artwork is for dark backgrounds and `color` artwork for light ones. Every logo, wordmark and symbol also has `black` and `white` one-color versions. PNG counterparts are in the release pack's `png/` folder with matching filenames. Each SVG canvas includes a small safety margin; keep more clear space in the surrounding layout.
+
+## The Mark
+
+The mark is drawn on a 256-unit grid. Its geometry, colors and motion are recorded in [source/mark.json](source/mark.json).
+
+- **Beam**: the stem and foot of the b, a square-ended L in ink.
+- **Ticks**: vernier graduations to the left of the beam, in a quieter ink.
+- **Jaw**: a cyan L beside the beam that closes on the point.
+- **Point**: the measured point, centered in the bowl between the beam, the jaw and the foot.
+
+Strokes are converted to filled outlines, so the artwork scales correctly in tools that do not scale strokes.
+
+### Two Cuts
+
+| Cut | Use | Detail |
+| --- | --- | --- |
+| Large | 64 px and up | Fifteen fine ticks, 24-unit strokes, a 9.5-unit point inside a soft cyan glow |
+| Small | Below 64 px, app icons and favicons | Four heavy ticks, 30-unit strokes, a 15-unit point, no glow |
+
+Sizes refer to the rendered 256-unit canvas. The small cut is designed and checked at 16, 24, 32 and 48 px; at 16 px the point is a soft two-pixel dot. The large cut's fine ticks blur below 64 px, so never use it there. The small cut stays correct at any larger size, which is why the app icons use it.
+
+### Mark Colors
+
+| Part | On dark (`inverse`) | On light (`color`) |
+| --- | --- | --- |
+| Beam | `#EAF3FF` | `#061A33` |
+| Jaw | `#00BAF1` | `#0096D6` |
+| Ticks | `#7690B0` large, `#9DB3CF` small | `#536C8C` |
+| Point | `#FFFFFF` large, `#8BE7FF` small | `#0096D6` |
+| Glow (large cut) | `#00BAF1`, radius 26, 20% opacity | `#00BAF1`, radius 24, 16% opacity |
+
+One-color artwork uses a single color for every part and omits the glow.
+
+### Motion
+
+On screen, the mark can animate: the jaw slides down the beam and closes on the point, then a ring pings outward from the point. At rest the jaw is closed and the ring is invisible, which is why the static files have no ring.
+
+| Element | Specification |
+| --- | --- |
+| Jaw | Starts 60 grid units up the beam and slides to rest; `1.1s cubic-bezier(.6,0,.3,1)` after `.3s` |
+| Ring | Circle on the point: radius 16 and 3-unit stroke on the large cut, radius 15 and 1.25 px stroke on the small cut; `#8BE7FF` on dark, `#0096D6` on light. Fades in to 95% opacity, then grows to 2.7 times while fading out; `.9s cubic-bezier(.2,.8,.2,1)` after `1.2s` |
+| Loop | For showcases only: 5 s cycle, jaw closed from 30% to 84%, ring pinging from 32% to 62% |
+| Reduced motion | Show the closed mark without animation |
+
+To animate an inlined SVG, target `[data-part="jaw"]` and add the ring as an unfilled circle on the point, at (141, 166) on the large cut or (144, 166) on the small cut:
+
+```css
+.briosa-mark [data-part="jaw"] { animation: briosa-jaw 1.1s cubic-bezier(.6, 0, .3, 1) .3s both; }
+.briosa-ring { opacity: 0; transform-box: fill-box; transform-origin: center;
+  animation: briosa-ping .9s cubic-bezier(.2, .8, .2, 1) 1.2s both; }
+@keyframes briosa-jaw { from { transform: translateY(-60px); } }
+@keyframes briosa-ping { 0% { opacity: 0; transform: scale(1); } 8% { opacity: .95; } 100% { opacity: 0; transform: scale(2.7); } }
+@media (prefers-reduced-motion: reduce) { .briosa-mark *, .briosa-ring { animation: none; } }
+```
+
+## Wordmark and Vernier Rule
+
+The wordmark is **BRIOSA** in Saira at weight 600 and width 125, with 0.14 em letter spacing, converted to outlines. Its source path and letter positions are in [source/wordmark.json](source/wordmark.json).
+
+The optional vernier rule hangs below the wordmark like a caliper's scale. At a 60 px wordmark it is a 2 px line in the tick color, with 2 px ticks below it: minor ticks 7 px long, and jaw-colored major ticks 13 px long. The rule spans the wordmark exactly, from the B's stem to the A's foot, in twenty divisions of about 14 px with a major tick at every fifth. Its line sits 23 px below the baseline. It scales with the wordmark.
+
+In the horizontal lockups, the ruled wordmark is centered on the mark's grid and the rule's line runs through the measured point. In the compact lockup, the baseline runs through the point.
 
 ## Color
 
-| Color | Hex | RGB | Intended Role |
-| --- | --- | --- | --- |
-| Deep blue | `#003875` | 0, 56, 117 | Primary brand, links, dark backgrounds |
-| Cyan | `#00BAF1` | 0, 186, 241 | Upper plane, accents on dark backgrounds |
-| Graphite | `#585B62` | 88, 91, 98 | Wordmark and body text on white |
-| Silver | `#F2F2F2` | 242, 242, 242 | Soft surfaces, lower plane in inverse artwork |
-| White | `#FFFFFF` | 255, 255, 255 | Light background, inverse wordmark and left plane |
+All artwork uses solid sRGB fills, apart from the large cut's glow. Reusable tokens are in [colors.css](colors.css) and [colors.json](colors.json).
 
-These values come from [SpatialAnalyzer's public website stylesheet](https://www.spatialanalyzer.com/css/styles.css), inspected on September 13, 2026. They are the selected Briosa palette, not a claim to a vendor-issued brand specification. Reusable values are in [colors.css](colors.css) and [colors.json](colors.json). All artwork uses solid sRGB fills.
+### Dark
 
-Graphite on white is **6.80:1** contrast; deep blue on white is **11.52:1**; deep blue on cyan is **5.10:1**. Use these combinations for normal text. Cyan on white is an accent treatment for the logo, not a normal-text color. See [WCAG contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
+| Token | Hex | Role |
+| --- | --- | --- |
+| `void` | `#040B17` | Dark background |
+| `dark-ink` | `#EAF3FF` | Beam, wordmark, primary text |
+| `dark-ink-2` | `#9DB3CF` | Secondary text, product labels, small-cut ticks |
+| `dark-ink-3` | `#7690B0` | Tertiary text, large-cut ticks, vernier rule |
+| `dark-jaw` | `#00BAF1` | Jaw, major ticks, links and accents |
+| `dark-point` | `#FFFFFF` | Large-cut point |
+| `dark-point-small` | `#8BE7FF` | Small-cut point, motion ring |
+| `dark-edge` | `#223A53` | Icon tile edge and dividers; `rgba(120,190,255,.26)` over void |
 
-The inverse logo is designed for deep blue. Choose the all-white version on other sufficiently dark backgrounds when the cyan or silver would lose contrast. Use the black version for one-color light-background printing. A printer should make any required CMYK or spot-color conversion against a physical proof; the pack does not assign an unverified Pantone match.
+### Light
+
+| Token | Hex | Role |
+| --- | --- | --- |
+| `clean-room` | `#F3F7FB` | Light background |
+| `light-ink` | `#061A33` | Beam, wordmark, primary text |
+| `light-ink-2` | `#46607E` | Secondary text, product labels |
+| `light-ink-3` | `#536C8C` | Ticks, vernier rule, tertiary text |
+| `light-jaw` | `#0096D6` | Jaw, major ticks, point, motion ring |
+| `light-link` | `#006DB6` | Links and accent text |
+| `light-edge` | `#D6E2EE` | Icon tile edge |
+| `light-line` | `#B9C9DB` | Dividers; `rgba(0,56,117,.24)` over clean room |
+
+### Deviation Scale
+
+A five-step scale from a scan's deviation color map, from −2 to +2 standard deviations. Use it for data, status and accent rules, never in the logo.
+
+| Step | Dark | Light |
+| --- | --- | --- |
+| −2 | `#3E5BFF` | `#2E47D9` |
+| −1 | `#00BAF1` | `#0096D6` |
+| 0 | `#34F5C5` | `#10A985` |
+| +1 | `#FFD23F` | `#D99A00` |
+| +2 | `#FF4D6D` | `#DE2F55` |
+
+### Contrast
+
+On void, `dark-ink` is **17.61:1**, `dark-ink-2` **9.18:1**, `dark-ink-3` **5.99:1** and `dark-jaw` **8.72:1**. On clean room, `light-ink` is **16.21:1**, `light-ink-2` **6.03:1**, `light-ink-3` **5.01:1** and `light-link` **5.05:1**. All of these pass for normal text. `light-jaw` is **3.08:1**: use it for artwork and large text only, and `light-link` for links. See [WCAG contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and the [validation record](qa/VALIDATION.md).
+
+The `#00BAF1` cyan carries over from v1. A printer should make any required CMYK or spot-color conversion against a physical proof; the pack assigns no unverified Pantone match.
 
 ## Size and Space
 
-- Keep clear space of at least **half the lowercase `o` height** around a logo lockup. Around a standalone symbol, keep at least **one quarter of the symbol width**. Increase spacing when adjacent content is busy.
-- Use a standalone symbol at **24 px wide or larger**. The supplied 16 px, 24 px, and 32 px favicon PNGs use an optical variant with slightly increased gaps between the same three planes.
-- Use the horizontal logo without the slogan at **160 px wide or larger** and the standalone wordmark at **96 px wide or larger**.
-- For the horizontal logo with the slogan, use at least **440 px width**. For the stacked logo with the slogan, use at least **360 px width**. At smaller sizes, use the version without the slogan and place the slogan separately as readable text.
-- Preserve aspect ratio. Keep the three planes separate and in their original orientation. The lower plane is gray on light backgrounds; the upper plane remains cyan.
+| Asset | Canvas | Minimum |
+| --- | --- | --- |
+| Horizontal logo | 735 × 266 | 250 px wide |
+| Horizontal logo with slogan | 735 × 271 | 440 px wide |
+| Stacked logo | 375 × 411 | 180 px wide |
+| Stacked logo with slogan | 375 × 441 | 320 px wide |
+| Compact horizontal logo | 511 × 136 | 100 px wide |
+| Wordmark | 630 × 133 | 80 px wide |
+| Ruled wordmark | 630 × 208 | 160 px wide |
+| Symbol, large cut | 256 × 256 | 64 px |
+| Symbol, small cut | 256 × 256 | 16 px; use the large cut from 64 px |
+| Suite lockups | 667 to 845 × 136 | 28 px tall |
 
-The size guidance is based on the included visual proof, not a promise that every output medium will reproduce fine detail equally. The artwork uses mathematical 30-degree diagonal directions and a normalized geometry closely matched to the selected concept.
+The minimums keep the vernier rule at least 1 px and the slogan at about 14 px. Below the horizontal logo's minimum, use the compact logo, whose small-cut mark stays legible. At smaller sizes, drop the slogan and set it as readable text instead.
+
+- Keep clear space of at least the height of the wordmark's capitals around any lockup. The symbol's 256-unit canvas already includes its clear space; do not crop it.
+- Preserve aspect ratio. Do not rotate, skew, recolor or rearrange the beam, jaw, ticks and point, and keep the jaw closed on the point in static use.
+- Keep the jaw cyan in full-color artwork; on other backgrounds, choose the black or white one-color version.
 
 ## Typography and Wording
 
-The wordmark is **custom outlined artwork** traced from the approved concept. It is not a font file, and it should not be recreated by typing `briosa` in another typeface. Preserve its distinctive diagonal `i` dot and the open `a` form. The portable source outlines are in [source/wordmark.json](source/wordmark.json).
+| Role | Typeface |
+| --- | --- |
+| Wordmark | Saira, weight 600, width 125, 0.14 em letter spacing, uppercase, outlined |
+| Slogan in logos | Saira, weight 500, width 106, outlined |
+| Product labels | Saira, weight 500, width 125, 0.16 em letter spacing, uppercase, outlined |
+| Display and headings | Saira |
+| Body and interface text | Inter |
+| Code | [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) |
 
-The slogan and product descriptors use **Inter Regular**, converted to paths in the SVGs. The original variable font and its SIL Open Font License are included in `fonts/`. Inter also works as supporting text in documents and web interfaces. The logo does not require it to be installed.
+Saira and Inter are included in `fonts/` with their SIL Open Font Licenses. JetBrains Mono, also OFL, is not needed by any asset and is not bundled. Use the supplied outlined wordmark rather than typing BRIOSA; web interfaces that load Saira may set live text with the settings above.
 
 Use the slogan exactly:
 
@@ -65,11 +181,11 @@ Use this supporting product description where more explanation is needed:
 
 > An open-source gRPC bridge to the SpatialAnalyzer SDK.
 
-Write **Briosa** in prose and use the lowercase wordmark as supplied. Write **SpatialAnalyzer** as one word, with capital S and A. Product descriptions should explain that SpatialAnalyzer must be separately installed, licensed, and running.
+Write **Briosa** in prose; the capitals belong to the wordmark. Write **SpatialAnalyzer** as one word, with capital S and A. Product descriptions should explain that SpatialAnalyzer must be separately installed, licensed, and running.
 
 ## Product Suite
 
-All products share the same master symbol and wordmark. Their text labels identify the product; different language logos or unrelated color schemes are unnecessary.
+All products share the small-cut mark and the wordmark, followed by a divider and an uppercase product label.
 
 | Product | Color Asset | Inverse Asset |
 | --- | --- | --- |
@@ -81,26 +197,62 @@ All products share the same master symbol and wordmark. Their text labels identi
 
 ## Web and Application Use
 
-Use SVG where supported and PNG where a platform requires raster images. PNG and ICO exports are included in the release pack. The PNG exports retain transparency. General logo PNGs are 1600 px wide, suite PNGs are 1200 px wide, and symbol PNGs are 1024 px wide. Application icon PNGs range from 16 to 1024 px. The ICO contains 16, 32, 48, 64, 128, and 256 px frames.
+Use SVG where supported and PNG where a platform requires raster images. The release pack includes transparent PNG exports: logos 1600 px wide, suite lockups 1200 px wide and symbols 1024 px wide. Application icon PNGs range from 16 to 1024 px; the 16, 24 and 32 px files come from the favicon's tighter fit and the rest from the dark app icon. The ICO contains 16, 32, 48, 64, 128 and 256 px frames.
 
 Example markup, with paths adjusted for the consuming site:
 
 ```html
-<img src="/brand/logos/briosa-horizontal-color.svg" alt="Briosa" width="220">
+<img src="/brand/logos/briosa-horizontal-color.svg" alt="Briosa" width="280" height="101">
 <link rel="icon" href="/brand/icons/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/brand/icons/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/brand/icons/apple-touch-icon.png">
 ```
 
+A Docusaurus navigation bar can use the documentation suite lockup at 32 px tall:
+
+```ts
+navbar: {
+  logo: {
+    alt: 'Briosa home',
+    src: 'brand/suite/briosa-docs-color.svg',
+    srcDark: 'brand/suite/briosa-docs-inverse.svg',
+    width: 179,
+    height: 32,
+  },
+},
+```
+
 For a decorative repeated logo next to readable product text, use an empty `alt` attribute. For a linked logo that navigates home, use `alt="Briosa home"`. The standalone SVG files also include accessible titles and descriptions.
+
+Desktop applications should take their window and taskbar icons from the small cut: the [dark tile](icons/app-icon.svg) for an icon that reads on light and dark taskbars, or the [small-cut symbol](marks/briosa-symbol-small-inverse.svg) where a tile-less icon is preferred. Choose the compact logo for in-app headers below 250 px wide.
+
+## Changes From v1
+
+Brand v2 replaces the three-plane symbol and the traced lowercase wordmark. Most files keep their v1 paths, so consumers can update in place, but proportions and color tokens changed.
+
+| v1 | v2 |
+| --- | --- |
+| Three-plane symbol in `marks/briosa-symbol-*` | Caliper b large cut at the same paths, plus `marks/briosa-symbol-small-*` |
+| Lowercase traced wordmark | BRIOSA in Saira, plus `logos/briosa-wordmark-ruled-*` |
+| Horizontal logo, 852 × 238 | 735 × 266, plus `logos/briosa-horizontal-compact-*` for small sizes |
+| Stacked logo, 704 × 568 | 375 × 411 |
+| Suite lockups, 600 × 192 with slash labels | Content-sized, 136 px tall, with a divider and uppercase labels |
+| Deep-blue icon tiles | Void tiles with the small cut, plus `icons/app-icon-light.svg` |
+| Color tokens `blue`, `cyan`, `graphite`, `silver`, `white` | Theme tokens; `cyan` continues as `dark-jaw` |
+| Inter for the slogan and labels | Saira; Inter remains for body text |
+| `fonts/OFL.txt` | `fonts/Inter-OFL.txt` and `fonts/Saira-OFL.txt` |
+| `source/symbol.json` and the traced concept | `source/mark.json`; the wordmark is outlined from the font |
+
+Deep blue `#003875`, graphite `#585B62` and silver `#F2F2F2` are retired from the identity.
 
 ## Sources and Governance
 
-- [Approved concept](source/approved-concept.png): the user-selected Vector Pulse design in SpatialAnalyzer-derived colors, with the selected slogan. Generated with the built-in ImageGen tool during this design session.
-- [Vector master](source/briosa-master.svg): the outlined stacked master with the slogan.
-- [Rebuild instructions](source/README.md): reproducible SVG, PNG and icon exports from the local master data.
-- [Validation record](qa/VALIDATION.md): asset checks, outline comparison, and rendered size proofs.
-- [Inter source](https://github.com/google/fonts/tree/main/ofl/inter) and [font license](fonts/OFL.txt).
+- Approved design: Caliper b, selected on 2026-10-18 from the Scanline identity explorations, as shown on its identity sheet and in the briosa.dev homepage prototype.
+- [Mark geometry](source/mark.json) and [wordmark outlines](source/wordmark.json): readable records, written by the build from [build_brand.py](source/build_brand.py) and the fonts.
+- [Vector master](source/briosa-master.svg): the stacked color logo with the slogan, as a vector editor entry point.
+- [Rebuild instructions](source/README.md): reproducible SVG, PNG and icon exports.
+- [Validation record](qa/VALIDATION.md): asset checks, outline comparison, contrast and rendered size proofs.
+- [Saira source](https://github.com/google/fonts/tree/main/ofl/saira) and [license](fonts/Saira-OFL.txt); [Inter source](https://github.com/google/fonts/tree/main/ofl/inter) and [license](fonts/Inter-OFL.txt).
 - Project brand permissions and trademark questions are governed by [Briosa's existing Brand and Trademarks guidance](https://github.com/spatialanalyzer/governance/blob/main/BRAND_AND_TRADEMARKS.md).
 
 The Briosa logo artwork contains no SpatialAnalyzer or Hexagon logo. The pack establishes no registration, ownership, certification, or official-vendor status. Technical rendering checks are not a trademark clearance search.

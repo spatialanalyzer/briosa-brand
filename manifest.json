@@ -1,287 +1,432 @@
 {
   "brand": "Briosa",
-  "version": "v1",
+  "version": "v2.0.0",
   "tagline": "SpatialAnalyzer integration, simplified.",
   "description": "An open-source gRPC bridge to the SpatialAnalyzer SDK.",
   "palette": {
-    "blue": "#003875",
-    "cyan": "#00BAF1",
-    "graphite": "#585B62",
-    "silver": "#F2F2F2",
-    "white": "#FFFFFF"
+    "void": "#040B17",
+    "clean-room": "#F3F7FB",
+    "dark-ink": "#EAF3FF",
+    "dark-ink-2": "#9DB3CF",
+    "dark-ink-3": "#7690B0",
+    "dark-jaw": "#00BAF1",
+    "dark-point": "#FFFFFF",
+    "dark-point-small": "#8BE7FF",
+    "dark-edge": "#223A53",
+    "light-ink": "#061A33",
+    "light-ink-2": "#46607E",
+    "light-ink-3": "#536C8C",
+    "light-jaw": "#0096D6",
+    "light-link": "#006DB6",
+    "light-edge": "#D6E2EE",
+    "light-line": "#B9C9DB"
   },
   "assets": [
     {
       "file": "marks/briosa-symbol-color.svg",
       "theme": "color",
       "kind": "symbol",
-      "width": 384,
-      "height": 372.6632301492381,
-      "tagline": false
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "large"
+    },
+    {
+      "file": "marks/briosa-symbol-small-color.svg",
+      "theme": "color",
+      "kind": "symbol",
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "logos/briosa-wordmark-color.svg",
       "theme": "color",
       "kind": "wordmark",
-      "width": 600,
-      "height": 174,
+      "width": 630,
+      "height": 133,
+      "tagline": false
+    },
+    {
+      "file": "logos/briosa-wordmark-ruled-color.svg",
+      "theme": "color",
+      "kind": "wordmark",
+      "width": 630,
+      "height": 208,
       "tagline": false
     },
     {
       "file": "logos/briosa-horizontal-color.svg",
       "theme": "color",
       "kind": "logo",
-      "width": 852,
-      "height": 238,
-      "tagline": false
+      "width": 735,
+      "height": 266,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-horizontal-tagline-color.svg",
       "theme": "color",
       "kind": "logo",
-      "width": 872,
-      "height": 272,
-      "tagline": true
+      "width": 735,
+      "height": 271,
+      "tagline": true,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-color.svg",
       "theme": "color",
       "kind": "logo",
-      "width": 704,
-      "height": 568,
-      "tagline": false
+      "width": 375,
+      "height": 411,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-tagline-color.svg",
       "theme": "color",
       "kind": "logo",
-      "width": 704,
-      "height": 624,
-      "tagline": true
+      "width": 375,
+      "height": 441,
+      "tagline": true,
+      "cut": "large"
+    },
+    {
+      "file": "logos/briosa-horizontal-compact-color.svg",
+      "theme": "color",
+      "kind": "logo",
+      "width": 511,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "marks/briosa-symbol-inverse.svg",
       "theme": "inverse",
       "kind": "symbol",
-      "width": 384,
-      "height": 372.6632301492381,
-      "tagline": false
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "large"
+    },
+    {
+      "file": "marks/briosa-symbol-small-inverse.svg",
+      "theme": "inverse",
+      "kind": "symbol",
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "logos/briosa-wordmark-inverse.svg",
       "theme": "inverse",
       "kind": "wordmark",
-      "width": 600,
-      "height": 174,
+      "width": 630,
+      "height": 133,
+      "tagline": false
+    },
+    {
+      "file": "logos/briosa-wordmark-ruled-inverse.svg",
+      "theme": "inverse",
+      "kind": "wordmark",
+      "width": 630,
+      "height": 208,
       "tagline": false
     },
     {
       "file": "logos/briosa-horizontal-inverse.svg",
       "theme": "inverse",
       "kind": "logo",
-      "width": 852,
-      "height": 238,
-      "tagline": false
+      "width": 735,
+      "height": 266,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-horizontal-tagline-inverse.svg",
       "theme": "inverse",
       "kind": "logo",
-      "width": 872,
-      "height": 272,
-      "tagline": true
+      "width": 735,
+      "height": 271,
+      "tagline": true,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-inverse.svg",
       "theme": "inverse",
       "kind": "logo",
-      "width": 704,
-      "height": 568,
-      "tagline": false
+      "width": 375,
+      "height": 411,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-tagline-inverse.svg",
       "theme": "inverse",
       "kind": "logo",
-      "width": 704,
-      "height": 624,
-      "tagline": true
+      "width": 375,
+      "height": 441,
+      "tagline": true,
+      "cut": "large"
+    },
+    {
+      "file": "logos/briosa-horizontal-compact-inverse.svg",
+      "theme": "inverse",
+      "kind": "logo",
+      "width": 511,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "marks/briosa-symbol-black.svg",
       "theme": "black",
       "kind": "symbol",
-      "width": 384,
-      "height": 372.6632301492381,
-      "tagline": false
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "large"
+    },
+    {
+      "file": "marks/briosa-symbol-small-black.svg",
+      "theme": "black",
+      "kind": "symbol",
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "logos/briosa-wordmark-black.svg",
       "theme": "black",
       "kind": "wordmark",
-      "width": 600,
-      "height": 174,
+      "width": 630,
+      "height": 133,
+      "tagline": false
+    },
+    {
+      "file": "logos/briosa-wordmark-ruled-black.svg",
+      "theme": "black",
+      "kind": "wordmark",
+      "width": 630,
+      "height": 208,
       "tagline": false
     },
     {
       "file": "logos/briosa-horizontal-black.svg",
       "theme": "black",
       "kind": "logo",
-      "width": 852,
-      "height": 238,
-      "tagline": false
+      "width": 735,
+      "height": 266,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-horizontal-tagline-black.svg",
       "theme": "black",
       "kind": "logo",
-      "width": 872,
-      "height": 272,
-      "tagline": true
+      "width": 735,
+      "height": 271,
+      "tagline": true,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-black.svg",
       "theme": "black",
       "kind": "logo",
-      "width": 704,
-      "height": 568,
-      "tagline": false
+      "width": 375,
+      "height": 411,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-tagline-black.svg",
       "theme": "black",
       "kind": "logo",
-      "width": 704,
-      "height": 624,
-      "tagline": true
+      "width": 375,
+      "height": 441,
+      "tagline": true,
+      "cut": "large"
+    },
+    {
+      "file": "logos/briosa-horizontal-compact-black.svg",
+      "theme": "black",
+      "kind": "logo",
+      "width": 511,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "marks/briosa-symbol-white.svg",
       "theme": "white",
       "kind": "symbol",
-      "width": 384,
-      "height": 372.6632301492381,
-      "tagline": false
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "large"
+    },
+    {
+      "file": "marks/briosa-symbol-small-white.svg",
+      "theme": "white",
+      "kind": "symbol",
+      "width": 256,
+      "height": 256,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "logos/briosa-wordmark-white.svg",
       "theme": "white",
       "kind": "wordmark",
-      "width": 600,
-      "height": 174,
+      "width": 630,
+      "height": 133,
+      "tagline": false
+    },
+    {
+      "file": "logos/briosa-wordmark-ruled-white.svg",
+      "theme": "white",
+      "kind": "wordmark",
+      "width": 630,
+      "height": 208,
       "tagline": false
     },
     {
       "file": "logos/briosa-horizontal-white.svg",
       "theme": "white",
       "kind": "logo",
-      "width": 852,
-      "height": 238,
-      "tagline": false
+      "width": 735,
+      "height": 266,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-horizontal-tagline-white.svg",
       "theme": "white",
       "kind": "logo",
-      "width": 872,
-      "height": 272,
-      "tagline": true
+      "width": 735,
+      "height": 271,
+      "tagline": true,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-white.svg",
       "theme": "white",
       "kind": "logo",
-      "width": 704,
-      "height": 568,
-      "tagline": false
+      "width": 375,
+      "height": 411,
+      "tagline": false,
+      "cut": "large"
     },
     {
       "file": "logos/briosa-stacked-tagline-white.svg",
       "theme": "white",
       "kind": "logo",
-      "width": 704,
-      "height": 624,
-      "tagline": true
+      "width": 375,
+      "height": 441,
+      "tagline": true,
+      "cut": "large"
+    },
+    {
+      "file": "logos/briosa-horizontal-compact-white.svg",
+      "theme": "white",
+      "kind": "logo",
+      "width": 511,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-server-color.svg",
       "theme": "color",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 841,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-server-inverse.svg",
       "theme": "inverse",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 841,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-dotnet-color.svg",
       "theme": "color",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 740,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-dotnet-inverse.svg",
       "theme": "inverse",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 740,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-js-color.svg",
       "theme": "color",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 667,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-js-inverse.svg",
       "theme": "inverse",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 667,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-python-color.svg",
       "theme": "color",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 845,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-python-inverse.svg",
       "theme": "inverse",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 845,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-docs-color.svg",
       "theme": "color",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 761,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "suite/briosa-docs-inverse.svg",
       "theme": "inverse",
       "kind": "suite",
-      "width": 600,
-      "height": 192,
-      "tagline": false
+      "width": 761,
+      "height": 136,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "icons/app-icon.svg",
@@ -289,7 +434,17 @@
       "kind": "icon",
       "width": 1024,
       "height": 1024,
-      "tagline": false
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "icons/app-icon-light.svg",
+      "theme": "color",
+      "kind": "icon",
+      "width": 1024,
+      "height": 1024,
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "icons/app-icon-maskable.svg",
@@ -297,7 +452,8 @@
       "kind": "icon",
       "width": 1024,
       "height": 1024,
-      "tagline": false
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "icons/favicon.svg",
@@ -305,15 +461,17 @@
       "kind": "icon",
       "width": 1024,
       "height": 1024,
-      "tagline": false
+      "tagline": false,
+      "cut": "small"
     },
     {
       "file": "source/briosa-master.svg",
       "theme": "color",
       "kind": "master",
-      "width": 704,
-      "height": 624,
-      "tagline": true
+      "width": 375,
+      "height": 441,
+      "tagline": true,
+      "cut": "large"
     }
   ]
 }

@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="384" height="372.6632" viewBox="0 0 384 372.6632" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
 <title id="title">Briosa symbol — white</title>
 <desc id="desc">Briosa symbol — white</desc>
-<path data-plane="left" fill="#FFFFFF" d="M32,222 L176,138.8616 L176,234.8616 L32,318 Z"/>
-<path data-plane="upper" fill="#FFFFFF" d="M192,32 L280,82.8068 L280,230.8068 L192,180 Z"/>
-<path data-plane="lower" fill="#FFFFFF" d="M148,276 L240,222.8838 L352,287.547 L260,340.6632 Z"/>
+<g data-part="briosa-mark"><path data-part="ticks" fill="#FFFFFF" d="M50 38.5H68V41.5H50ZM58 50.5H68V53.5H58ZM58 62.5H68V65.5H58ZM58 74.5H68V77.5H58ZM50 86.5H68V89.5H50ZM58 98.5H68V101.5H58ZM58 110.5H68V113.5H58ZM58 122.5H68V125.5H58ZM50 134.5H68V137.5H50ZM58 146.5H68V149.5H58ZM58 158.5H68V161.5H58ZM58 170.5H68V173.5H58ZM50 182.5H68V185.5H50ZM58 194.5H68V197.5H58Z"/><path data-part="beam" fill="#FFFFFF" d="M76 22V224H164V200H100V22Z"/><path data-part="jaw" fill="#FFFFFF" d="M112 132H182V188H206V108H112Z"/><circle data-part="point" cx="141" cy="166" r="9.5" fill="#FFFFFF"/></g>
 </svg>

@@ -1,7 +1,28 @@
 :root {
-  --briosa-blue: #003875;
-  --briosa-cyan: #00BAF1;
-  --briosa-graphite: #585B62;
-  --briosa-silver: #F2F2F2;
-  --briosa-white: #FFFFFF;
+  --briosa-void: #040B17;
+  --briosa-clean-room: #F3F7FB;
+  --briosa-dark-ink: #EAF3FF;
+  --briosa-dark-ink-2: #9DB3CF;
+  --briosa-dark-ink-3: #7690B0;
+  --briosa-dark-jaw: #00BAF1;
+  --briosa-dark-point: #FFFFFF;
+  --briosa-dark-point-small: #8BE7FF;
+  --briosa-dark-edge: #223A53;
+  --briosa-light-ink: #061A33;
+  --briosa-light-ink-2: #46607E;
+  --briosa-light-ink-3: #536C8C;
+  --briosa-light-jaw: #0096D6;
+  --briosa-light-link: #006DB6;
+  --briosa-light-edge: #D6E2EE;
+  --briosa-light-line: #B9C9DB;
+  --briosa-dark-dev-n2: #3E5BFF;
+  --briosa-dark-dev-n1: #00BAF1;
+  --briosa-dark-dev-0: #34F5C5;
+  --briosa-dark-dev-p1: #FFD23F;
+  --briosa-dark-dev-p2: #FF4D6D;
+  --briosa-light-dev-n2: #2E47D9;
+  --briosa-light-dev-n1: #0096D6;
+  --briosa-light-dev-0: #10A985;
+  --briosa-light-dev-p1: #D99A00;
+  --briosa-light-dev-p2: #DE2F55;
 }
