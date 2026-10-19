@@ -1,9 +1,9 @@
 {
-  "version": "v2.0.0",
+  "version": "v2.1.0",
   "status": "passed",
-  "svg_assets": 51,
-  "checks_passed": 591,
-  "checks_total": 591,
+  "svg_assets": 59,
+  "checks_passed": 679,
+  "checks_total": 679,
   "wordmark_silhouette_iou": 0.98816200515172,
   "icon_legibility": [
     {
@@ -2182,6 +2182,358 @@
     {
       "passed": true,
       "check": "png\\suite\\briosa-docs-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-color.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-inverse.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-black.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-installer-compact-white.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-installer-compact-white.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-color.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-color.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-color.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-inverse.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-inverse.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-inverse.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-black.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-black.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-black.png: transparent background retained"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: vector-only content"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: accessible title and description"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: no external image, script, style or font dependency"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: unique IDs"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: exact approved colors"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: filled outlines, no strokes to rescale"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: only the glow is translucent"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: one-color artwork has no glow"
+    },
+    {
+      "passed": true,
+      "check": "suite/briosa-control-center-compact-white.svg: v1 artwork and superseded slogan absent"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-white.png: artwork visible, unclipped and padded"
+    },
+    {
+      "passed": true,
+      "check": "png\\suite\\briosa-control-center-compact-white.png: transparent background retained"
     },
     {
       "passed": true,

@@ -3,19 +3,19 @@
 **SpatialAnalyzer integration, simplified.**
 
 The shared brand assets for the [Briosa product suite](https://github.com/spatialanalyzer/briosa).
-**Brand version: v2.0.0**, the Caliper b identity.
+**Brand version: v2.1.0**, the Caliper b identity.
 
 ![Briosa brand overview](preview.png)
 
-[Download the v2.0.0 brand pack](https://github.com/spatialanalyzer/briosa-brand/releases/download/v2.0.0/briosa-brand-v2.0.0.zip)
+[Download the v2.1.0 brand pack](https://github.com/spatialanalyzer/briosa-brand/releases/download/v2.1.0/briosa-brand-v2.1.0.zip)
 · [Brand guide](BRAND-GUIDE.md)
-· [Release notes](https://github.com/spatialanalyzer/briosa-brand/releases/tag/v2.0.0)
+· [Release notes](https://github.com/spatialanalyzer/briosa-brand/releases/tag/v2.1.0)
 
 ## Assets
 
 - `logos/`: horizontal, stacked, compact and wordmark SVGs, with and without the slogan, in color, inverse, black and white.
 - `marks/`: the Caliper b symbol in its large and small cuts.
-- `suite/`: matching server, .NET, JS, Python and docs lockups.
+- `suite/`: matching server, .NET, JS, Python and docs lockups, plus compact Installer and Control Center logos for desktop app headers.
 - `icons/`: dark and light application icons, a maskable icon and the favicon.
 - `colors.css` and `colors.json`: exact reusable sRGB colors for dark and light themes.
 - `source/`: the mark geometry, wordmark outlines, master SVG and rebuild scripts.
@@ -36,7 +36,7 @@ before updating a consumer.
 ## Use in Another Repository
 
 Download the approved release and copy only the assets that repository needs.
-Record the source as `spatialanalyzer/briosa-brand@v2.0.0`, with the original
+Record the source as `spatialanalyzer/briosa-brand@v2.1.0`, with the original
 asset paths. Keep the required license notices with those copies. Builds can
 then use their own committed files without fetching this repository at runtime.
 

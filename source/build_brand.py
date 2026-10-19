@@ -427,6 +427,27 @@ def compact(theme_name, label=None):
     return compose(compact_parts(theme_name, label=label), MARGIN / 2)
 
 
+# Application headers are too narrow for a suite lockup's label beside the wordmark,
+# so the compact product logo sets the label under BRIOSA, right-aligned with it.
+UNDER_SIZE = 0.5    # label size, in em of the wordmark
+UNDER_GAP = 0.25    # wordmark baseline to the label's capitals, in em of the wordmark
+
+
+def compact_product(theme_name, label, size=GRID / 2):
+    """The compact logo with a product label under the wordmark. A label wider than
+    BRIOSA is set to the wordmark's width, so both ends line up."""
+    parts = compact_parts(theme_name, size)
+    word = parts[1]
+    k = size / GRID
+    em = C_EM * k
+    _, (x0, _, x1, _), _, _ = LABEL.layout(label, 0.16)
+    label_size = min(UNDER_SIZE * em, (word.box[2] - word.box[0]) / (x1 - x0) * LABEL.upm)
+    baseline = POINT[1] * k + UNDER_GAP * em + LABEL.cap * label_size
+    parts.append(place_text(LABEL, label, word.box[2], baseline, label_size, THEMES[theme_name]['ink2'],
+                            align='right', tracking=0.16))
+    return compose(parts, MARGIN / 2)
+
+
 # ---------------------------------------------------------------- icons
 
 def rounded_rect(x, y, w, h, r):
@@ -487,6 +508,7 @@ def make_icons():
 
 THEME_ORDER = ('color', 'inverse', 'black', 'white')
 SUITE = [('server', 'SERVER'), ('dotnet', '.NET'), ('js', 'JS'), ('python', 'PYTHON'), ('docs', 'DOCS')]
+APPS = [('installer', 'INSTALLER', 'Installer'), ('control-center', 'CONTROL CENTER', 'Control Center')]
 
 
 def make_assets():
@@ -513,6 +535,11 @@ def make_assets():
         for t in ('color', 'inverse'):
             w, h, content = compact(t, label)
             write_asset('suite', f'briosa-{slug}-{t}', w, h, content, f'Briosa {label} — {t}', t, 'suite', cut='small')
+    for slug, label, name in APPS:
+        for t in THEME_ORDER:
+            w, h, content = compact_product(t, label)
+            write_asset('suite', f'briosa-{slug}-compact-{t}', w, h, content,
+                        f'Briosa {name} compact logo — {t}', t, 'suite', cut='small')
     make_icons()
     w, h, content = stacked('color', True)
     write_asset('source', 'briosa-master', w, h, content, 'Briosa master identity', 'color', 'master', True, cut='large')

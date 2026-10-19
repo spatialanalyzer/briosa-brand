@@ -1,10 +1,10 @@
 # Asset Validation
 
-Status: **passed**. 591 of 591 automated checks passed.
+Status: **passed**. 679 of 679 automated checks passed.
 
-Brand version: **v2.0.0**.
+Brand version: **v2.1.0**.
 
-- 51 deliverable SVG assets were parsed and checked for vector-only content, approved solid colors, filled outlines without strokes, accessible titles/descriptions, unique IDs, and absence of external images, scripts, styles and font dependencies. Only the large cut's glow is translucent, and one-color artwork has none. No v1 plane artwork remains.
+- 59 deliverable SVG assets were parsed and checked for vector-only content, approved solid colors, filled outlines without strokes, accessible titles/descriptions, unique IDs, and absence of external images, scripts, styles and font dependencies. Only the large cut's glow is translucent, and one-color artwork has none. No v1 plane artwork remains.
 - Every exported logo, symbol and suite PNG was checked for visibility, transparent background, and unclipped artwork with safety padding.
 - The outlined wordmark achieved **98.82% silhouette overlap** with FreeType's own rendering of Saira at wght 600 and wdth 125, at the same size and letter positions, supersampled to avoid hinting. This checks the outlines against the font, not the design.
 - Icons at 16, 24, 32, 48, 64 and 128 px each show one solid jaw, clear of one solid beam. The measured point reaches its full color from 24 px; at 16 px it antialiases to a softer two-pixel dot, as the proof shows.
