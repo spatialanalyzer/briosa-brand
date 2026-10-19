@@ -1,6 +1,6 @@
 {
   "brand": "Briosa",
-  "version": "v2.0.0",
+  "version": "v2.1.0",
   "tagline": "SpatialAnalyzer integration, simplified.",
   "description": "An open-source gRPC bridge to the SpatialAnalyzer SDK.",
   "palette": {
@@ -425,6 +425,78 @@
       "kind": "suite",
       "width": 761,
       "height": 136,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-installer-compact-color.svg",
+      "theme": "color",
+      "kind": "suite",
+      "width": 511,
+      "height": 147,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-installer-compact-inverse.svg",
+      "theme": "inverse",
+      "kind": "suite",
+      "width": 511,
+      "height": 147,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-installer-compact-black.svg",
+      "theme": "black",
+      "kind": "suite",
+      "width": 511,
+      "height": 147,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-installer-compact-white.svg",
+      "theme": "white",
+      "kind": "suite",
+      "width": 511,
+      "height": 147,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-control-center-compact-color.svg",
+      "theme": "color",
+      "kind": "suite",
+      "width": 511,
+      "height": 142,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-control-center-compact-inverse.svg",
+      "theme": "inverse",
+      "kind": "suite",
+      "width": 511,
+      "height": 142,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-control-center-compact-black.svg",
+      "theme": "black",
+      "kind": "suite",
+      "width": 511,
+      "height": 142,
+      "tagline": false,
+      "cut": "small"
+    },
+    {
+      "file": "suite/briosa-control-center-compact-white.svg",
+      "theme": "white",
+      "kind": "suite",
+      "width": 511,
+      "height": 142,
       "tagline": false,
       "cut": "small"
     },

@@ -38,7 +38,7 @@ manifest. Raster exports are written to the ignored `png/` directory and
 ignored PNG/ICO files in `icons/`. Validation writes the ICO and the `qa/`
 proofs, including a comparison of the outlined wordmark with FreeType's own
 rendering of Saira. After all checks pass, it creates
-`dist/briosa-brand-v2.0.0.zip` and a companion SHA-256 checksum file. The ZIP
+`dist/briosa-brand-v2.1.0.zip` and a companion SHA-256 checksum file. The ZIP
 contains file checksums as well.
 
 The ZIP is assembled from explicit artifact paths; Git metadata, installed
@@ -51,7 +51,7 @@ do not replace visual review. Commit updated vectors and proofs together.
 
 ## Releases
 
-The root `VERSION` file identifies the brand release, currently `v2.0.0`.
+The root `VERSION` file identifies the brand release, currently `v2.1.0`.
 Keep published tags fixed. To publish a later refinement, update `VERSION`,
 the versioned download links and release wording, rebuild, inspect the
 proofs, and publish a new tag with the ZIP and checksum from `dist/`.

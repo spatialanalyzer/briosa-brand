@@ -2,7 +2,7 @@
 
 **SpatialAnalyzer integration, simplified.**
 
-Brand version: **v2.0.0**. [Download the complete release pack](https://github.com/spatialanalyzer/briosa-brand/releases/download/v2.0.0/briosa-brand-v2.0.0.zip).
+Brand version: **v2.1.0**. [Download the complete release pack](https://github.com/spatialanalyzer/briosa-brand/releases/download/v2.1.0/briosa-brand-v2.1.0.zip).
 
 ![Briosa identity overview](preview.png)
 
@@ -17,6 +17,7 @@ Every deliverable is vector paths and shapes, including the wordmark, slogan and
 | General logo on dark | [Horizontal inverse logo](logos/briosa-horizontal-inverse.svg) |
 | General logo on light | [Horizontal color logo](logos/briosa-horizontal-color.svg) |
 | Navigation bars, app headers, footers, under 250 px wide | [Compact horizontal logo](logos/briosa-horizontal-compact-inverse.svg) ([color](logos/briosa-horizontal-compact-color.svg)) |
+| Desktop app navigation header that names the app | [Installer compact logo](suite/briosa-installer-compact-inverse.svg) or [Control Center compact logo](suite/briosa-control-center-compact-inverse.svg) |
 | Splash screen, cover or hero | [Stacked inverse logo](logos/briosa-stacked-inverse.svg) |
 | Hero or cover with the slogan | [Stacked logo with slogan](logos/briosa-stacked-tagline-inverse.svg) |
 | Wide introduction with the slogan | [Horizontal logo with slogan](logos/briosa-horizontal-tagline-inverse.svg) |
@@ -153,8 +154,9 @@ The `#00BAF1` cyan carries over from v1. A printer should make any required CMYK
 | Symbol, large cut | 256 × 256 | 64 px |
 | Symbol, small cut | 256 × 256 | 16 px; use the large cut from 64 px |
 | Suite lockups | 667 to 845 × 136 | 28 px tall |
+| Compact product logos | 511 × 142 to 147 | 170 px wide |
 
-The minimums keep the vernier rule at least 1 px and the slogan at about 14 px. Below the horizontal logo's minimum, use the compact logo, whose small-cut mark stays legible. At smaller sizes, drop the slogan and set it as readable text instead.
+The minimums keep the vernier rule at least 1 px, the slogan at about 14 px and product labels at about 9 px. Below the horizontal logo's minimum, use the compact logo, whose small-cut mark stays legible. At smaller sizes, drop the slogan and set it as readable text instead.
 
 - Keep clear space of at least the height of the wordmark's capitals around any lockup. The symbol's 256-unit canvas already includes its clear space; do not crop it.
 - Preserve aspect ratio. Do not rotate, skew, recolor or rearrange the beam, jaw, ticks and point, and keep the jaw closed on the point in static use.
@@ -195,6 +197,13 @@ All products share the small-cut mark and the wordmark, followed by a divider an
 | Python | [Python](suite/briosa-python-color.svg) | [Python inverse](suite/briosa-python-inverse.svg) |
 | Documentation | [docs](suite/briosa-docs-color.svg) | [docs inverse](suite/briosa-docs-inverse.svg) |
 
+Desktop app navigation headers are too narrow for a label beside the wordmark. The compact product logos keep the compact logo intact and set the product label under BRIOSA, right-aligned, in the same label style at half the wordmark's size. A label wider than BRIOSA is set to the wordmark's width, so CONTROL CENTER lines up with both ends. Each also has `black` and `white` versions for high-contrast themes.
+
+| App | Color Asset | Inverse Asset |
+| --- | --- | --- |
+| Installer | [installer](suite/briosa-installer-compact-color.svg) | [installer inverse](suite/briosa-installer-compact-inverse.svg) |
+| Control Center | [control center](suite/briosa-control-center-compact-color.svg) | [control center inverse](suite/briosa-control-center-compact-inverse.svg) |
+
 ## Web and Application Use
 
 Use SVG where supported and PNG where a platform requires raster images. The release pack includes transparent PNG exports: logos 1600 px wide, suite lockups 1200 px wide and symbols 1024 px wide. Application icon PNGs range from 16 to 1024 px; the 16, 24 and 32 px files come from the favicon's tighter fit and the rest from the dark app icon. The ICO contains 16, 32, 48, 64, 128 and 256 px frames.
@@ -224,7 +233,7 @@ navbar: {
 
 For a decorative repeated logo next to readable product text, use an empty `alt` attribute. For a linked logo that navigates home, use `alt="Briosa home"`. The standalone SVG files also include accessible titles and descriptions.
 
-Desktop applications should take their window and taskbar icons from the small cut: the [dark tile](icons/app-icon.svg) for an icon that reads on light and dark taskbars, or the [small-cut symbol](marks/briosa-symbol-small-inverse.svg) where a tile-less icon is preferred. Choose the compact logo for in-app headers below 250 px wide.
+Desktop applications should take their window and taskbar icons from the small cut: the [dark tile](icons/app-icon.svg) for an icon that reads on light and dark taskbars, or the [small-cut symbol](marks/briosa-symbol-small-inverse.svg) where a tile-less icon is preferred. Choose the compact logo for in-app headers below 250 px wide, or the app's compact product logo where the header names the app.
 
 ## Changes From v1
 
