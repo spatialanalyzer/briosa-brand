@@ -212,6 +212,16 @@
       "jaw": "closes by 30%, holds to 84%, reopens at 100%",
       "ring": "opacity .9 at 32%, scale 2.3 and opacity 0 by 62%"
     },
-    "reduced_motion": "Show the closed mark without animation."
+    "reduced_motion": "Show the closed mark without animation.",
+    "reading": {
+      "travel": "60/208 of the beam height",
+      "duration": "1s",
+      "open": "0 to 40%, ease-out cubic, cubic-bezier(.33,1,.68,1)",
+      "close": "40% to 100%, ease-in-out cubic, cubic-bezier(.65,0,.35,1)",
+      "trigger": "pointer entry or keyboard focus on a linked mark, or once on coming into full view",
+      "ring": "none",
+      "reduced_motion": "none; the jaw stays closed"
+    },
+    "pause": "Every loop needs a visible pause control (WCAG 2.2.2); a paused loop holds its current frame."
   }
 }

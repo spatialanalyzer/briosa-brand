@@ -35,28 +35,46 @@ def flatten(rgb, alpha, ground):
 # ---------------------------------------------------------------- color
 
 VOID, CLEAN_ROOM, CYAN = '#040B17', '#F3F7FB', '#00BAF1'
+DARK_TINT, LIGHT_TINT = (120, 190, 255), (0, 56, 117)        # hairline tints over each ground
 COLORS = {
     'void': VOID,                     # dark ground
     'clean-room': CLEAN_ROOM,         # light ground
     'dark-ink': '#EAF3FF',            # beam, wordmark and text on dark
     'dark-ink-2': '#9DB3CF',          # secondary text, small-cut ticks
-    'dark-ink-3': '#7690B0',          # tertiary text, large-cut ticks, rule
+    'dark-ink-3': '#8199BA',          # tertiary text; 4.5:1 on every dark surface
     'dark-jaw': CYAN,                 # jaw, major ticks, accent
     'dark-point': '#FFFFFF',          # large-cut point
     'dark-point-small': '#8BE7FF',    # small-cut point, motion ring
-    'dark-edge': flatten((120, 190, 255), .26, VOID),         # icon edge, dividers
+    'dark-edge': flatten(DARK_TINT, .26, VOID),               # icon edge, dividers
     'light-ink': '#061A33',           # beam, wordmark and text on light
     'light-ink-2': '#46607E',         # secondary text
     'light-ink-3': '#536C8C',         # ticks, rule
     'light-jaw': '#0096D6',           # jaw, major ticks, point, motion ring
     'light-link': '#006DB6',          # links and accent text; the jaw is for artwork
     'light-edge': '#D6E2EE',          # icon tile edge
-    'light-line': flatten((0, 56, 117), .24, CLEAN_ROOM),     # dividers
+    'light-line': flatten(LIGHT_TINT, .24, CLEAN_ROOM),       # dividers
+    'dark-tick': '#7690B0',           # large-cut ticks and the rule on dark; artwork, not text
+    # Interface surfaces: an alternate band and two raised panels beside each ground.
+    'dark-deep': '#071A33',
+    'dark-panel': '#0B2546',
+    'dark-panel-2': '#0E2C53',
+    'light-deep': '#E7EFF7',
+    'light-panel': '#FFFFFF',
+    'light-panel-2': '#F7FAFD',
 }
 # The Scanline deviation scale, from -2 to +2 standard deviations.
 DEVIATION = {
     'dark': {'n2': '#3E5BFF', 'n1': '#00BAF1', '0': '#34F5C5', 'p1': '#FFD23F', 'p2': '#FF4D6D'},
     'light': {'n2': '#2E47D9', 'n1': '#0096D6', '0': '#10A985', 'p1': '#D99A00', 'p2': '#DE2F55'},
+}
+# Status is the deviation map made text-safe: each color reads at 4.5:1 or more as a
+# 10.5 px pill label on an 11% tint of itself, over every surface of its theme.
+# Undecided is neutral; the others follow steps 0, -1, +1, +2 and -2.
+STATUS = {
+    'dark': {'current': '#34F5C5', 'next': '#00BAF1', 'undecided': '#9DB3CF', 'uncommitted': '#FFD23F',
+             'excluded': '#FF7E95', 'unavailable': '#9CAEFF'},
+    'light': {'current': '#076A55', 'next': '#0062A6', 'undecided': '#4A6280', 'uncommitted': '#805300',
+              'excluded': '#B81E40', 'unavailable': '#3B4BC8'},
 }
 
 
@@ -71,10 +89,25 @@ THEMES = {
     'color': theme(C['light-ink'], C['light-ink-2'], C['light-jaw'], C['light-ink-3'], C['light-ink-3'],
                    C['light-jaw'], C['light-jaw'], C['light-ink-3'], C['light-line'], glow=(CYAN, 24, .16)),
     # Full color for dark backgrounds, the primary presentation.
-    'inverse': theme(C['dark-ink'], C['dark-ink-2'], C['dark-jaw'], C['dark-ink-3'], C['dark-ink-2'],
-                     C['dark-point'], C['dark-point-small'], C['dark-ink-3'], C['dark-edge'], glow=(CYAN, 26, .2)),
+    'inverse': theme(C['dark-ink'], C['dark-ink-2'], C['dark-jaw'], C['dark-tick'], C['dark-ink-2'],
+                     C['dark-point'], C['dark-point-small'], C['dark-tick'], C['dark-edge'], glow=(CYAN, 26, .2)),
     'black': theme(*['#000000'] * 9),
     'white': theme(*['#FFFFFF'] * 9),
+}
+
+# Interface roles per theme, for colors.json, the desktop theme and the QA proofs.
+SURFACES = ('panel', 'panel-2', 'ground', 'deep')
+UI = {
+    'dark': {'ground': VOID, 'deep': C['dark-deep'], 'panel': C['dark-panel'], 'panel-2': C['dark-panel-2'],
+             'ink': C['dark-ink'], 'ink-2': C['dark-ink-2'], 'ink-3': C['dark-ink-3'],
+             'accent': C['dark-jaw'], 'accent-core': C['dark-point-small'], 'link': C['dark-jaw'],
+             'tick': C['dark-tick'], 'line': C['dark-edge'], 'edge': C['dark-edge'],
+             'line-tint': '#{:02X}{:02X}{:02X}'.format(*DARK_TINT)},
+    'light': {'ground': CLEAN_ROOM, 'deep': C['light-deep'], 'panel': C['light-panel'], 'panel-2': C['light-panel-2'],
+              'ink': C['light-ink'], 'ink-2': C['light-ink-2'], 'ink-3': C['light-ink-3'],
+              'accent': C['light-jaw'], 'link': C['light-link'],
+              'tick': C['light-ink-3'], 'line': C['light-line'], 'edge': C['light-edge'],
+              'line-tint': '#{:02X}{:02X}{:02X}'.format(*LIGHT_TINT)},
 }
 
 # ---------------------------------------------------------------- the Caliper b mark
@@ -103,6 +136,13 @@ MOTION = {
     'loop': {'duration': '5s', 'jaw': 'closes by 30%, holds to 84%, reopens at 100%',
              'ring': 'opacity .9 at 32%, scale 2.3 and opacity 0 by 62%'},
     'reduced_motion': 'Show the closed mark without animation.',
+    # A reading: on hover or focus the jaw opens up the beam and closes on the point again.
+    'reading': {'travel': '60/208 of the beam height', 'duration': '1s',
+                'open': '0 to 40%, ease-out cubic, cubic-bezier(.33,1,.68,1)',
+                'close': '40% to 100%, ease-in-out cubic, cubic-bezier(.65,0,.35,1)',
+                'trigger': 'pointer entry or keyboard focus on a linked mark, or once on coming into full view',
+                'ring': 'none', 'reduced_motion': 'none; the jaw stays closed'},
+    'pause': 'Every loop needs a visible pause control (WCAG 2.2.2); a paused loop holds its current frame.',
 }
 
 
@@ -178,10 +218,10 @@ def mark_svg(theme_name, cut):
 # ---------------------------------------------------------------- type
 
 class Face:
-    """A static instance of a variable font, with simple left-to-right outline layout."""
+    """A static font, or an instance of a variable font, with simple left-to-right outline layout."""
 
     def __init__(self, path, **axes):
-        self.font = instantiateVariableFont(TTFont(path), axes, inplace=False)
+        self.font = instantiateVariableFont(TTFont(path), axes, inplace=False) if axes else TTFont(path)
         self.axes = axes
         self.glyphs = self.font.getGlyphSet()
         self.cmap = self.font.getBestCmap()
@@ -245,6 +285,7 @@ class Face:
 
 SAIRA = ROOT / 'fonts/Saira-Variable.ttf'
 INTER = ROOT / 'fonts/Inter-Variable.ttf'
+JETBRAINS = ROOT / 'fonts/JetBrainsMono-Variable.ttf'
 WORD = Face(SAIRA, wght=600, wdth=125)     # the wordmark
 SLOGAN = Face(SAIRA, wght=500, wdth=106)   # the slogan, as set on briosa.dev
 LABEL = Face(SAIRA, wght=500, wdth=125)    # product labels and captions
@@ -639,6 +680,231 @@ def make_preview():
     (ROOT / 'preview.svg').write_text(svg(width, height, '\n'.join(out), 'Briosa brand asset pack', TAGLINE), encoding='utf-8', newline='\n')
 
 
+# ---------------------------------------------------------------- fonts
+# The variable fonts are the sources. The web builds are the same fonts in WOFF2. WPF
+# cannot select a variable font's axes, so the desktop builds are static instances at
+# the widths and weights the type roles use, each width named as its own family.
+
+VARIABLE_FONTS = [('Saira', SAIRA), ('Inter', INTER), ('JetBrains Mono', JETBRAINS)]
+LICENSES = {SAIRA: 'fonts/Saira-OFL.txt', INTER: 'fonts/Inter-OFL.txt', JETBRAINS: 'fonts/JetBrainsMono-OFL.txt'}
+DESKTOP_FONTS = [
+    ('Saira 106', 'Medium', SAIRA, {'wght': 500, 'wdth': 106}),     # slogan and subheads
+    ('Saira 106', 'SemiBold', SAIRA, {'wght': 600, 'wdth': 106}),   # display and headings
+    ('Saira 125', 'Medium', SAIRA, {'wght': 500, 'wdth': 125}),     # HUD and product labels
+    ('Saira 125', 'SemiBold', SAIRA, {'wght': 600, 'wdth': 125}),   # status pills
+    ('Inter', 'Regular', INTER, {'opsz': 14, 'wght': 400}),         # body and interface text
+    ('Inter', 'Medium', INTER, {'opsz': 14, 'wght': 500}),
+    ('Inter', 'SemiBold', INTER, {'opsz': 14, 'wght': 600}),
+    ('JetBrains Mono', 'Regular', JETBRAINS, {'wght': 400}),        # code, paths and versions
+    ('JetBrains Mono', 'Medium', JETBRAINS, {'wght': 500}),         # readouts
+]
+FONTS = []
+
+
+def rel(path):
+    return path.relative_to(ROOT).as_posix()
+
+
+def font_axes(font):
+    num = lambda v: int(v) if float(v).is_integer() else v
+    return {a.axisTag: [num(a.minValue), num(a.defaultValue), num(a.maxValue)] for a in font['fvar'].axes}
+
+
+def desktop_file(family, style):
+    return ROOT / 'fonts/desktop' / f'{family.replace(" ", "")}-{style}.ttf'
+
+
+def web_fonts():
+    """WOFF2 copies of the variable fonts, plus @font-face rules for them."""
+    rules = ['/* Briosa brand fonts for the web: the variable fonts in WOFF2, with every axis.',
+             '   Generated by source/build_brand.py. */']
+    for family, source in VARIABLE_FONTS:
+        font = TTFont(source, recalcBBoxes=False, recalcTimestamp=False)
+        span = font_axes(font)
+        path = ROOT / 'fonts/web' / source.with_suffix('.woff2').name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        font.flavor = 'woff2'
+        font.save(path)
+        FONTS.append({'file': rel(path), 'family': family, 'format': 'woff2', 'use': 'web', 'source': rel(source),
+                      'axes': span, 'license': LICENSES[source]})
+        rules += ['@font-face {', f"  font-family: '{family}';", f"  src: url('{path.name}') format('woff2');",
+                  f'  font-weight: {span["wght"][0]} {span["wght"][2]};']
+        if 'wdth' in span:
+            rules.append(f'  font-stretch: {span["wdth"][0]}% {span["wdth"][2]}%;')
+        rules += ['  font-display: swap;', '}']
+    (ROOT / 'fonts/web/fonts.css').write_text('\n'.join(rules) + '\n', encoding='utf-8', newline='\n')
+
+
+def desktop_font(family, style, source, location):
+    """Pin every axis and name the instance for WPF's weight, width and style model."""
+    font = instantiateVariableFont(TTFont(source), location, inplace=False, static=True)
+    name = font['name']
+    ps = f'{family.replace(" ", "")}-{style}'
+    origin = name.getDebugName(16) or name.getDebugName(1)
+    at = ', '.join(f'{tag} {value}' for tag, value in location.items())
+    records = {1: family if style == 'Regular' else f'{family} {style}', 2: 'Regular',
+               3: ';'.join(name.getDebugName(3).split(';')[:-1] + [ps]), 4: f'{family} {style}', 6: ps,
+               10: f'Static instance of {origin} at {at}, made with fontTools for the Briosa brand pack.',
+               16: family, 17: style}
+    for name_id in (*records, 21, 22, 25):
+        name.removeNames(nameID=name_id)
+    for name_id, text in records.items():
+        name.setName(text, name_id, 3, 1, 0x409)
+    # The variable font's STAT describes a design space the instance no longer has, and
+    # DirectWrite, under WPF, reads it: Saira 106 would report as UltraCondensed. Without
+    # it, WPF takes the family from the name table and the width from OS/2.
+    for tag in ('STAT', 'DSIG'):
+        if tag in font:
+            del font[tag]
+    name.removeUnusedNames(font)
+    os2 = font['OS/2']
+    os2.fsSelection = (os2.fsSelection | 1 << 6) & ~(1 << 5 | 1)     # REGULAR, not BOLD or ITALIC
+    font['head'].macStyle = 0
+    path = desktop_file(family, style)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    font.recalcTimestamp = False
+    font.save(path)
+    FONTS.append({'file': rel(path), 'family': family, 'style': style, 'format': 'ttf', 'use': 'desktop',
+                  'source': rel(source), 'location': location, 'weight': location['wght'], 'license': LICENSES[source]})
+
+
+def build_fonts():
+    for family, source in VARIABLE_FONTS:
+        FONTS.append({'file': rel(source), 'family': family, 'format': 'ttf', 'use': 'source',
+                      'axes': font_axes(TTFont(source)), 'license': LICENSES[source]})
+    web_fonts()
+    for entry in DESKTOP_FONTS:
+        desktop_font(*entry)
+
+
+# ---------------------------------------------------------------- desktop theme
+# A WPF resource dictionary for desktop apps to vendor byte-exact: both themes' colors
+# and the desktop type families. Font locations are relative to the dictionary, so the
+# pack's layout must be kept: desktop/ beside fonts/desktop/.
+
+DESKTOP_FAMILIES = [
+    ('BriosaDisplayFontFamily', 'Saira 106', 'Segoe UI'),
+    ('BriosaLabelFontFamily', 'Saira 125', 'Segoe UI'),
+    ('BriosaBodyFontFamily', 'Inter', 'Segoe UI'),
+    ('BriosaMonoFontFamily', 'JetBrains Mono', 'Cascadia Mono, Consolas'),
+]
+
+
+def theme_roles(scheme):
+    """Every interface color of a theme under one flat role name."""
+    return {**UI[scheme], **{f'deviation-{k}': v for k, v in DEVIATION[scheme].items()},
+            **{f'status-{k}': v for k, v in STATUS[scheme].items()}}
+
+
+def desktop_key(scheme, role):
+    return 'Briosa' + scheme.capitalize() + ''.join(part[:1].upper() + part[1:] for part in role.split('-')) + 'Color'
+
+
+def write_desktop_theme(version):
+    lines = ['<!--',
+             f'  Briosa brand {version} desktop theme for WPF. Generated by source/build_brand.py.',
+             '  Colors for both themes are named Briosa{Dark|Light}{Role}Color. In Windows high',
+             '  contrast, use system colors instead. Font locations are relative to this file:',
+             '  keep desktop/ beside fonts/desktop/, as in the brand pack.',
+             '-->',
+             '<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"',
+             '                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">']
+    for scheme in ('dark', 'light'):
+        lines.append(f'  <!-- {scheme.capitalize()} theme -->')
+        lines += [f'  <Color x:Key="{desktop_key(scheme, role)}">{value}</Color>' for role, value in theme_roles(scheme).items()]
+    lines.append('  <!-- Type families: static instances in ../fonts/desktop/, with system fallbacks -->')
+    lines += [f'  <FontFamily x:Key="{key}">../fonts/desktop/#{family}, {fallback}</FontFamily>'
+              for key, family, fallback in DESKTOP_FAMILIES]
+    lines.append('</ResourceDictionary>')
+    path = ROOT / 'desktop/BriosaTheme.xaml'
+    path.parent.mkdir(exist_ok=True)
+    path.write_text('\n'.join(lines) + '\n', encoding='utf-8', newline='\n')
+
+
+# ---------------------------------------------------------------- system proof
+# Status pills, inks and deviation steps on every surface of both themes, the gauge and
+# meter motifs, and a specimen of each desktop font, outlined from the built files.
+
+PILL = Face(SAIRA, wght=600, wdth=118)    # status pill labels, as set on briosa.dev
+MONO = Face(JETBRAINS, wght=500)          # readouts
+STEPS = {'n2': '−2', 'n1': '−1', '0': '0', 'p1': '+1', 'p2': '+2'}
+SEVERITY = [('INFO', 'unavailable'), ('NOTE', 'next'), ('TIP', 'current'), ('CAUTION', 'uncommitted'),
+            ('DANGER', 'excluded')]
+METER = {0: [], 1: ['uncommitted'], 2: ['next'] * 2, 3: ['current'] * 3}
+SPECIMENS = {'Saira 106': 'SpatialAnalyzer integration, simplified.', 'Saira 125': 'CONTROL CENTER · SERVER 0.9.0',
+             'Inter': 'An open-source gRPC bridge to the SpatialAnalyzer SDK.',
+             'JetBrains Mono': 'SetVariable("X", 331.512) → OK'}
+
+
+def tint(color, alpha, ground):
+    return flatten(tuple(int(color[i:i + 2], 16) for i in (1, 3, 5)), alpha, ground)
+
+
+def pill(x, y, label, color, ground):
+    """A 24 px status pill: a dot and an uppercase label in the color, on an 11% tint."""
+    size, tracking = 10.5, 0.1
+    _, _, _, advance = PILL.layout(label, tracking)
+    width = 1 + 9 + 6 + 7 + advance * size / PILL.upm + tracking * size + 9 + 1
+    out = (f'<rect x="{n(x + .5)}" y="{n(y + .5)}" width="{n(width - 1)}" height="23" rx="3" '
+           f'fill="{tint(color, .11, ground)}" stroke="{tint(color, .42, ground)}"/>'
+           f'<circle cx="{n(x + 13)}" cy="{n(y + 12)}" r="3" fill="{color}"/>')
+    out += place_text(PILL, label, x + 23, y + 12 + PILL.cap * size / 2, size, color, tracking=tracking).render(0, 0)
+    return out, width
+
+
+def make_system_proof():
+    width, top, row = 1600, 72, 116
+    out = []
+    for column, scheme in enumerate(('dark', 'light')):
+        ui, x0 = UI[scheme], column * 800
+        out.append(rect(x0, 0, 800, top, ui['ground']))
+        out.append(caption(f'{scheme.upper()} · STATUS, INKS AND DEVIATION ON EVERY SURFACE', x0 + 32, 44, ui['ink-3'], size=11))
+        for i, surface in enumerate(SURFACES):
+            ground, y = ui[surface], top + i * row
+            out.append(rect(x0, y, 800, row, ground))
+            out.append(caption(f'{surface.upper()} · {ground}', x0 + 32, y + 28, ui['ink-3'], size=11))
+            x = x0 + 32
+            for status, color in STATUS[scheme].items():
+                markup, w = pill(x, y + 42, status.upper(), color, ground)
+                out.append(markup)
+                x += w + 10
+            x = x0 + 32
+            for role in ('ink', 'ink-2', 'ink-3', 'link'):
+                text = place_text(BODY, role.replace('-', ' ').capitalize(), x, y + 96, 14, ui[role])
+                out.append(text.render(0, 0))
+                x = text.box[2] + 20
+            for step, color in DEVIATION[scheme].items():
+                text = place_text(MONO, STEPS[step], x + 12, y + 96, 14, color)
+                out.append(text.render(0, 0))
+                x = text.box[2] + 4
+        y = top + 4 * row
+        out.append(rect(x0, y, 800, 88, ui['panel']))
+        out.append(caption('SEVERITY GAUGES · EVIDENCE METERS', x0 + 32, y + 28, ui['ink-3'], size=11))
+        x = x0 + 32
+        for level, (label, status) in enumerate(SEVERITY, 1):
+            for j, color in enumerate(DEVIATION[scheme].values()):
+                out.append(rect(x + j * 8, y + 50, 6, 11, color if j + 1 == level else tint(color, .18, ui['panel']), 1))
+            text = place_text(LABEL, label, x + 48, y + 60, 10.5, STATUS[scheme][status], tracking=0.16)
+            out.append(text.render(0, 0))
+            x = text.box[2] + 22
+        unlit = flatten(DARK_TINT if scheme == 'dark' else LIGHT_TINT, .26 if scheme == 'dark' else .24, ui['panel'])
+        for level, lit in METER.items():
+            for j in range(3):
+                out.append(rect(x + j * 6, y + 50, 4, 12, STATUS[scheme][lit[j]] if j < len(lit) else unlit, 1))
+            out.append(place_text(MONO, str(level), x + 24, y + 61, 12, ui['ink-2']).render(0, 0))
+            x += 52
+    y = top + 4 * row + 88
+    height = y + 96 + 44 * len(DESKTOP_FONTS)
+    out.append(rect(0, y, width, height - y, CLEAN_ROOM))
+    out.append(caption('DESKTOP FONTS · STATIC INSTANCES FOR WPF, OUTLINED FROM FONTS/DESKTOP', 32, y + 44, C['light-ink-3'], size=11))
+    for i, (family, style, _, _) in enumerate(DESKTOP_FONTS):
+        baseline = y + 100 + i * 44
+        out.append(caption(f'{family} {style}'.upper(), 32, baseline - 6, C['light-ink-3'], size=11))
+        out.append(place_text(Face(desktop_file(family, style)), SPECIMENS[family], 360, baseline, 26, C['light-ink']).render(0, 0))
+    (ROOT / 'qa/system-proof.svg').write_text(svg(width, height, '\n'.join(out), 'Briosa system layer proof'),
+                                               encoding='utf-8', newline='\n')
+
+
 # ---------------------------------------------------------------- records
 
 def records(version):
@@ -679,17 +945,14 @@ def records(version):
     }
     (ROOT / 'source/wordmark.json').write_text(json.dumps(word, indent=2) + '\n', encoding='utf-8', newline='\n')
     palette = {k: v for k, v in COLORS.items()}
+    system = [{'file': 'colors.css', 'kind': 'css-custom-properties'}, {'file': 'colors.json', 'kind': 'color-tokens'},
+              {'file': 'fonts/web/fonts.css', 'kind': 'css-font-faces'},
+              {'file': 'desktop/BriosaTheme.xaml', 'kind': 'wpf-resource-dictionary'}]
     (ROOT / 'manifest.json').write_text(json.dumps({'brand': 'Briosa', 'version': version, 'tagline': TAGLINE,
-                                                    'description': DESCRIPTION, 'palette': palette, 'assets': MANIFEST},
+                                                    'description': DESCRIPTION, 'palette': palette, 'assets': MANIFEST,
+                                                    'fonts': FONTS, 'system': system},
                                                    indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
-    themes = {
-        'dark': {'ground': VOID, 'ink': C['dark-ink'], 'ink-2': C['dark-ink-2'], 'ink-3': C['dark-ink-3'],
-                 'accent': C['dark-jaw'], 'accent-core': C['dark-point-small'], 'line': C['dark-edge'],
-                 'deviation': DEVIATION['dark']},
-        'light': {'ground': CLEAN_ROOM, 'ink': C['light-ink'], 'ink-2': C['light-ink-2'], 'ink-3': C['light-ink-3'],
-                  'accent': C['light-jaw'], 'link': C['light-link'], 'line': C['light-line'], 'edge': C['light-edge'],
-                  'deviation': DEVIATION['light']},
-    }
+    themes = {scheme: {**UI[scheme], 'deviation': DEVIATION[scheme], 'status': STATUS[scheme]} for scheme in UI}
     (ROOT / 'colors.json').write_text(json.dumps({'brand': 'Briosa', 'version': version, 'colors': COLORS,
                                                   'themes': themes, 'mark': mark['colors'],
                                                   'translucent': {'dark-edge': 'rgba(120,190,255,.26) on void',
@@ -698,12 +961,17 @@ def records(version):
     css = [':root {']
     css += [f'  --briosa-{k}: {v};' for k, v in COLORS.items()]
     css += [f'  --briosa-{scheme}-dev-{k}: {v};' for scheme, values in DEVIATION.items() for k, v in values.items()]
+    css += [f'  --briosa-{scheme}-status-{k}: {v};' for scheme, values in STATUS.items() for k, v in values.items()]
     (ROOT / 'colors.css').write_text('\n'.join(css) + '\n}\n', encoding='utf-8', newline='\n')
 
 
 if __name__ == '__main__':
     version = (ROOT / 'VERSION').read_text(encoding='utf-8').strip()
+    build_fonts()
     make_assets()
     make_preview()
+    make_system_proof()
+    write_desktop_theme(version)
     records(version)
-    print(f'Built {len(MANIFEST)} outlined SVG assets and the brand preview.')
+    print(f'Built {len(MANIFEST)} outlined SVG assets, {len(FONTS)} font files, the desktop theme, '
+          'the brand preview and the system proof.')
