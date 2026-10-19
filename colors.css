@@ -3,7 +3,7 @@
   --briosa-clean-room: #F3F7FB;
   --briosa-dark-ink: #EAF3FF;
   --briosa-dark-ink-2: #9DB3CF;
-  --briosa-dark-ink-3: #7690B0;
+  --briosa-dark-ink-3: #8199BA;
   --briosa-dark-jaw: #00BAF1;
   --briosa-dark-point: #FFFFFF;
   --briosa-dark-point-small: #8BE7FF;
@@ -15,6 +15,13 @@
   --briosa-light-link: #006DB6;
   --briosa-light-edge: #D6E2EE;
   --briosa-light-line: #B9C9DB;
+  --briosa-dark-tick: #7690B0;
+  --briosa-dark-deep: #071A33;
+  --briosa-dark-panel: #0B2546;
+  --briosa-dark-panel-2: #0E2C53;
+  --briosa-light-deep: #E7EFF7;
+  --briosa-light-panel: #FFFFFF;
+  --briosa-light-panel-2: #F7FAFD;
   --briosa-dark-dev-n2: #3E5BFF;
   --briosa-dark-dev-n1: #00BAF1;
   --briosa-dark-dev-0: #34F5C5;
@@ -25,4 +32,16 @@
   --briosa-light-dev-0: #10A985;
   --briosa-light-dev-p1: #D99A00;
   --briosa-light-dev-p2: #DE2F55;
+  --briosa-dark-status-current: #34F5C5;
+  --briosa-dark-status-next: #00BAF1;
+  --briosa-dark-status-undecided: #9DB3CF;
+  --briosa-dark-status-uncommitted: #FFD23F;
+  --briosa-dark-status-excluded: #FF7E95;
+  --briosa-dark-status-unavailable: #9CAEFF;
+  --briosa-light-status-current: #076A55;
+  --briosa-light-status-next: #0062A6;
+  --briosa-light-status-undecided: #4A6280;
+  --briosa-light-status-uncommitted: #805300;
+  --briosa-light-status-excluded: #B81E40;
+  --briosa-light-status-unavailable: #3B4BC8;
 }

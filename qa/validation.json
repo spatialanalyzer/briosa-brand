@@ -1,9 +1,9 @@
 {
-  "version": "v2.1.0",
+  "version": "v2.2.0",
   "status": "passed",
   "svg_assets": 59,
-  "checks_passed": 679,
-  "checks_total": 679,
+  "checks_passed": 870,
+  "checks_total": 870,
   "wordmark_silhouette_iou": 0.98816200515172,
   "icon_legibility": [
     {
@@ -77,7 +77,7 @@
     {
       "foreground": "dark-ink-3",
       "background": "void",
-      "ratio": 5.99,
+      "ratio": 6.76,
       "minimum": 4.5
     },
     {
@@ -117,6 +117,568 @@
       "minimum": 3
     }
   ],
+  "text_contrast": [
+    {
+      "theme": "dark",
+      "role": "ink",
+      "color": "#EAF3FF",
+      "ratios": {
+        "panel": 13.72,
+        "panel-2": 12.48,
+        "ground": 17.61,
+        "deep": 15.58
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "ink-2",
+      "color": "#9DB3CF",
+      "ratios": {
+        "panel": 7.15,
+        "panel-2": 6.51,
+        "ground": 9.18,
+        "deep": 8.12
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "ink-3",
+      "color": "#8199BA",
+      "ratios": {
+        "panel": 5.27,
+        "panel-2": 4.79,
+        "ground": 6.76,
+        "deep": 5.98
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "link",
+      "color": "#00BAF1",
+      "ratios": {
+        "panel": 6.8,
+        "panel-2": 6.18,
+        "ground": 8.72,
+        "deep": 7.72
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-current",
+      "color": "#34F5C5",
+      "ratios": {
+        "panel": 10.98,
+        "panel-2": 9.98,
+        "ground": 14.09,
+        "deep": 12.46
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-next",
+      "color": "#00BAF1",
+      "ratios": {
+        "panel": 6.8,
+        "panel-2": 6.18,
+        "ground": 8.72,
+        "deep": 7.72
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-undecided",
+      "color": "#9DB3CF",
+      "ratios": {
+        "panel": 7.15,
+        "panel-2": 6.51,
+        "ground": 9.18,
+        "deep": 8.12
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-uncommitted",
+      "color": "#FFD23F",
+      "ratios": {
+        "panel": 10.64,
+        "panel-2": 9.67,
+        "ground": 13.65,
+        "deep": 12.07
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-excluded",
+      "color": "#FF7E95",
+      "ratios": {
+        "panel": 6.34,
+        "panel-2": 5.77,
+        "ground": 8.14,
+        "deep": 7.2
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-unavailable",
+      "color": "#9CAEFF",
+      "ratios": {
+        "panel": 7.25,
+        "panel-2": 6.59,
+        "ground": 9.3,
+        "deep": 8.23
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-current pill",
+      "color": "#34F5C5",
+      "ratios": {
+        "panel": 8.36,
+        "panel-2": 7.61,
+        "ground": 11.46,
+        "deep": 9.67
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-next pill",
+      "color": "#00BAF1",
+      "ratios": {
+        "panel": 5.58,
+        "panel-2": 5.03,
+        "ground": 7.54,
+        "deep": 6.36
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-undecided pill",
+      "color": "#9DB3CF",
+      "ratios": {
+        "panel": 5.8,
+        "panel-2": 5.28,
+        "ground": 7.87,
+        "deep": 6.66
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-uncommitted pill",
+      "color": "#FFD23F",
+      "ratios": {
+        "panel": 8.39,
+        "panel-2": 7.65,
+        "ground": 11.23,
+        "deep": 9.64
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-excluded pill",
+      "color": "#FF7E95",
+      "ratios": {
+        "panel": 5.41,
+        "panel-2": 4.95,
+        "ground": 7.11,
+        "deep": 6.18
+      }
+    },
+    {
+      "theme": "dark",
+      "role": "status-unavailable pill",
+      "color": "#9CAEFF",
+      "ratios": {
+        "panel": 5.88,
+        "panel-2": 5.35,
+        "ground": 7.92,
+        "deep": 6.77
+      }
+    },
+    {
+      "theme": "light",
+      "role": "ink",
+      "color": "#061A33",
+      "ratios": {
+        "panel": 17.45,
+        "panel-2": 16.66,
+        "ground": 16.21,
+        "deep": 15.03
+      }
+    },
+    {
+      "theme": "light",
+      "role": "ink-2",
+      "color": "#46607E",
+      "ratios": {
+        "panel": 6.49,
+        "panel-2": 6.2,
+        "ground": 6.03,
+        "deep": 5.59
+      }
+    },
+    {
+      "theme": "light",
+      "role": "ink-3",
+      "color": "#536C8C",
+      "ratios": {
+        "panel": 5.4,
+        "panel-2": 5.15,
+        "ground": 5.01,
+        "deep": 4.65
+      }
+    },
+    {
+      "theme": "light",
+      "role": "link",
+      "color": "#006DB6",
+      "ratios": {
+        "panel": 5.44,
+        "panel-2": 5.19,
+        "ground": 5.05,
+        "deep": 4.68
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-current",
+      "color": "#076A55",
+      "ratios": {
+        "panel": 6.56,
+        "panel-2": 6.26,
+        "ground": 6.09,
+        "deep": 5.65
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-next",
+      "color": "#0062A6",
+      "ratios": {
+        "panel": 6.37,
+        "panel-2": 6.08,
+        "ground": 5.92,
+        "deep": 5.48
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-undecided",
+      "color": "#4A6280",
+      "ratios": {
+        "panel": 6.27,
+        "panel-2": 5.98,
+        "ground": 5.82,
+        "deep": 5.4
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-uncommitted",
+      "color": "#805300",
+      "ratios": {
+        "panel": 6.66,
+        "panel-2": 6.35,
+        "ground": 6.18,
+        "deep": 5.73
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-excluded",
+      "color": "#B81E40",
+      "ratios": {
+        "panel": 6.37,
+        "panel-2": 6.08,
+        "ground": 5.92,
+        "deep": 5.48
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-unavailable",
+      "color": "#3B4BC8",
+      "ratios": {
+        "panel": 6.94,
+        "panel-2": 6.62,
+        "ground": 6.45,
+        "deep": 5.98
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-current pill",
+      "color": "#076A55",
+      "ratios": {
+        "panel": 5.58,
+        "panel-2": 5.32,
+        "ground": 5.17,
+        "deep": 4.82
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-next pill",
+      "color": "#0062A6",
+      "ratios": {
+        "panel": 5.4,
+        "panel-2": 5.15,
+        "ground": 5.04,
+        "deep": 4.67
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-undecided pill",
+      "color": "#4A6280",
+      "ratios": {
+        "panel": 5.38,
+        "panel-2": 5.13,
+        "ground": 5.02,
+        "deep": 4.66
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-uncommitted pill",
+      "color": "#805300",
+      "ratios": {
+        "panel": 5.66,
+        "panel-2": 5.43,
+        "ground": 5.27,
+        "deep": 4.92
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-excluded pill",
+      "color": "#B81E40",
+      "ratios": {
+        "panel": 5.29,
+        "panel-2": 5.08,
+        "ground": 4.94,
+        "deep": 4.6
+      }
+    },
+    {
+      "theme": "light",
+      "role": "status-unavailable pill",
+      "color": "#3B4BC8",
+      "ratios": {
+        "panel": 5.85,
+        "panel-2": 5.62,
+        "ground": 5.47,
+        "deep": 5.1
+      }
+    }
+  ],
+  "deviation_use": [
+    {
+      "theme": "dark",
+      "step": "n2",
+      "color": "#3E5BFF",
+      "ratios": {
+        "panel": 3.03,
+        "panel-2": 2.76,
+        "ground": 3.89,
+        "deep": 3.44
+      },
+      "text": false
+    },
+    {
+      "theme": "dark",
+      "step": "n1",
+      "color": "#00BAF1",
+      "ratios": {
+        "panel": 6.8,
+        "panel-2": 6.18,
+        "ground": 8.72,
+        "deep": 7.72
+      },
+      "text": true
+    },
+    {
+      "theme": "dark",
+      "step": "0",
+      "color": "#34F5C5",
+      "ratios": {
+        "panel": 10.98,
+        "panel-2": 9.98,
+        "ground": 14.09,
+        "deep": 12.46
+      },
+      "text": true
+    },
+    {
+      "theme": "dark",
+      "step": "p1",
+      "color": "#FFD23F",
+      "ratios": {
+        "panel": 10.64,
+        "panel-2": 9.67,
+        "ground": 13.65,
+        "deep": 12.07
+      },
+      "text": true
+    },
+    {
+      "theme": "dark",
+      "step": "p2",
+      "color": "#FF4D6D",
+      "ratios": {
+        "panel": 4.78,
+        "panel-2": 4.35,
+        "ground": 6.13,
+        "deep": 5.42
+      },
+      "text": false
+    },
+    {
+      "theme": "light",
+      "step": "n2",
+      "color": "#2E47D9",
+      "ratios": {
+        "panel": 6.95,
+        "panel-2": 6.64,
+        "ground": 6.46,
+        "deep": 5.99
+      },
+      "text": true
+    },
+    {
+      "theme": "light",
+      "step": "n1",
+      "color": "#0096D6",
+      "ratios": {
+        "panel": 3.32,
+        "panel-2": 3.17,
+        "ground": 3.08,
+        "deep": 2.86
+      },
+      "text": false
+    },
+    {
+      "theme": "light",
+      "step": "0",
+      "color": "#10A985",
+      "ratios": {
+        "panel": 2.98,
+        "panel-2": 2.85,
+        "ground": 2.77,
+        "deep": 2.57
+      },
+      "text": false
+    },
+    {
+      "theme": "light",
+      "step": "p1",
+      "color": "#D99A00",
+      "ratios": {
+        "panel": 2.45,
+        "panel-2": 2.34,
+        "ground": 2.28,
+        "deep": 2.11
+      },
+      "text": false
+    },
+    {
+      "theme": "light",
+      "step": "p2",
+      "color": "#DE2F55",
+      "ratios": {
+        "panel": 4.52,
+        "panel-2": 4.32,
+        "ground": 4.2,
+        "deep": 3.9
+      },
+      "text": false
+    }
+  ],
+  "fonts": [
+    {
+      "file": "fonts/Saira-Variable.ttf",
+      "use": "source",
+      "bytes": 483700
+    },
+    {
+      "file": "fonts/Inter-Variable.ttf",
+      "use": "source",
+      "bytes": 876576
+    },
+    {
+      "file": "fonts/JetBrainsMono-Variable.ttf",
+      "use": "source",
+      "bytes": 187208
+    },
+    {
+      "file": "fonts/web/Saira-Variable.woff2",
+      "use": "web",
+      "bytes": 172640
+    },
+    {
+      "file": "fonts/web/Inter-Variable.woff2",
+      "use": "web",
+      "bytes": 350460
+    },
+    {
+      "file": "fonts/web/JetBrainsMono-Variable.woff2",
+      "use": "web",
+      "bytes": 71736
+    },
+    {
+      "file": "fonts/desktop/Saira106-Medium.ttf",
+      "use": "desktop",
+      "bytes": 83152,
+      "silhouette_iou": 0.9985690746682855
+    },
+    {
+      "file": "fonts/desktop/Saira106-SemiBold.ttf",
+      "use": "desktop",
+      "bytes": 83216,
+      "silhouette_iou": 0.9988941604537509
+    },
+    {
+      "file": "fonts/desktop/Saira125-Medium.ttf",
+      "use": "desktop",
+      "bytes": 83232,
+      "silhouette_iou": 0.9987359905620629
+    },
+    {
+      "file": "fonts/desktop/Saira125-SemiBold.ttf",
+      "use": "desktop",
+      "bytes": 83240,
+      "silhouette_iou": 0.9987760930169307
+    },
+    {
+      "file": "fonts/desktop/Inter-Regular.ttf",
+      "use": "desktop",
+      "bytes": 341352,
+      "silhouette_iou": 0.9973299050632911
+    },
+    {
+      "file": "fonts/desktop/Inter-Medium.ttf",
+      "use": "desktop",
+      "bytes": 341908,
+      "silhouette_iou": 0.9978166873581917
+    },
+    {
+      "file": "fonts/desktop/Inter-SemiBold.ttf",
+      "use": "desktop",
+      "bytes": 342592,
+      "silhouette_iou": 0.9979448471713623
+    },
+    {
+      "file": "fonts/desktop/JetBrainsMono-Regular.ttf",
+      "use": "desktop",
+      "bytes": 115032,
+      "silhouette_iou": 0.9975579975579976
+    },
+    {
+      "file": "fonts/desktop/JetBrainsMono-Medium.ttf",
+      "use": "desktop",
+      "bytes": 115064,
+      "silhouette_iou": 0.9980808308873335
+    }
+  ],
   "failures": [],
   "checks": [
     {
@@ -126,6 +688,14 @@
     {
       "passed": true,
       "check": "Manifest version matches VERSION"
+    },
+    {
+      "passed": true,
+      "check": "Color tokens version matches VERSION"
+    },
+    {
+      "passed": true,
+      "check": "Desktop theme names the brand version"
     },
     {
       "passed": true,
@@ -2809,7 +3379,7 @@
     },
     {
       "passed": true,
-      "check": "dark-ink-3 on void: contrast 5.99:1 meets 4.5:1"
+      "check": "dark-ink-3 on void: contrast 6.76:1 meets 4.5:1"
     },
     {
       "passed": true,
@@ -2834,6 +3404,762 @@
     {
       "passed": true,
       "check": "light-jaw on clean-room: contrast 3.08:1 meets 3:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink on panel #0B2546: contrast 13.72:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink on panel-2 #0E2C53: contrast 12.48:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink on ground #040B17: contrast 17.61:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink on deep #071A33: contrast 15.58:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-2 on panel #0B2546: contrast 7.15:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-2 on panel-2 #0E2C53: contrast 6.51:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-2 on ground #040B17: contrast 9.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-2 on deep #071A33: contrast 8.12:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-3 on panel #0B2546: contrast 5.27:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-3 on panel-2 #0E2C53: contrast 4.79:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-3 on ground #040B17: contrast 6.76:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark ink-3 on deep #071A33: contrast 5.98:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark link on panel #0B2546: contrast 6.80:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark link on panel-2 #0E2C53: contrast 6.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark link on ground #040B17: contrast 8.72:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark link on deep #071A33: contrast 7.72:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current on panel #0B2546: contrast 10.98:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current on panel-2 #0E2C53: contrast 9.98:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current on ground #040B17: contrast 14.09:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current on deep #071A33: contrast 12.46:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next on panel #0B2546: contrast 6.80:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next on panel-2 #0E2C53: contrast 6.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next on ground #040B17: contrast 8.72:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next on deep #071A33: contrast 7.72:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided on panel #0B2546: contrast 7.15:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided on panel-2 #0E2C53: contrast 6.51:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided on ground #040B17: contrast 9.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided on deep #071A33: contrast 8.12:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted on panel #0B2546: contrast 10.64:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted on panel-2 #0E2C53: contrast 9.67:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted on ground #040B17: contrast 13.65:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted on deep #071A33: contrast 12.07:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded on panel #0B2546: contrast 6.34:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded on panel-2 #0E2C53: contrast 5.77:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded on ground #040B17: contrast 8.14:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded on deep #071A33: contrast 7.20:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable on panel #0B2546: contrast 7.25:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable on panel-2 #0E2C53: contrast 6.59:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable on ground #040B17: contrast 9.30:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable on deep #071A33: contrast 8.23:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current pill on panel #0B2546: contrast 8.36:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current pill on panel-2 #0E2C53: contrast 7.61:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current pill on ground #040B17: contrast 11.46:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-current pill on deep #071A33: contrast 9.67:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next pill on panel #0B2546: contrast 5.58:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next pill on panel-2 #0E2C53: contrast 5.03:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next pill on ground #040B17: contrast 7.54:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-next pill on deep #071A33: contrast 6.36:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided pill on panel #0B2546: contrast 5.80:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided pill on panel-2 #0E2C53: contrast 5.28:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided pill on ground #040B17: contrast 7.87:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-undecided pill on deep #071A33: contrast 6.66:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted pill on panel #0B2546: contrast 8.39:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted pill on panel-2 #0E2C53: contrast 7.65:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted pill on ground #040B17: contrast 11.23:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-uncommitted pill on deep #071A33: contrast 9.64:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded pill on panel #0B2546: contrast 5.41:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded pill on panel-2 #0E2C53: contrast 4.95:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded pill on ground #040B17: contrast 7.11:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-excluded pill on deep #071A33: contrast 6.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable pill on panel #0B2546: contrast 5.88:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable pill on panel-2 #0E2C53: contrast 5.35:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable pill on ground #040B17: contrast 7.92:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "dark status-unavailable pill on deep #071A33: contrast 6.77:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink on panel #FFFFFF: contrast 17.45:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink on panel-2 #F7FAFD: contrast 16.66:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink on ground #F3F7FB: contrast 16.21:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink on deep #E7EFF7: contrast 15.03:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-2 on panel #FFFFFF: contrast 6.49:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-2 on panel-2 #F7FAFD: contrast 6.20:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-2 on ground #F3F7FB: contrast 6.03:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-2 on deep #E7EFF7: contrast 5.59:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-3 on panel #FFFFFF: contrast 5.40:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-3 on panel-2 #F7FAFD: contrast 5.15:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-3 on ground #F3F7FB: contrast 5.01:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light ink-3 on deep #E7EFF7: contrast 4.65:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light link on panel #FFFFFF: contrast 5.44:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light link on panel-2 #F7FAFD: contrast 5.19:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light link on ground #F3F7FB: contrast 5.05:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light link on deep #E7EFF7: contrast 4.68:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current on panel #FFFFFF: contrast 6.56:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current on panel-2 #F7FAFD: contrast 6.26:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current on ground #F3F7FB: contrast 6.09:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current on deep #E7EFF7: contrast 5.65:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next on panel #FFFFFF: contrast 6.37:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next on panel-2 #F7FAFD: contrast 6.08:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next on ground #F3F7FB: contrast 5.92:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next on deep #E7EFF7: contrast 5.48:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided on panel #FFFFFF: contrast 6.27:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided on panel-2 #F7FAFD: contrast 5.98:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided on ground #F3F7FB: contrast 5.82:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided on deep #E7EFF7: contrast 5.40:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted on panel #FFFFFF: contrast 6.66:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted on panel-2 #F7FAFD: contrast 6.35:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted on ground #F3F7FB: contrast 6.18:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted on deep #E7EFF7: contrast 5.73:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded on panel #FFFFFF: contrast 6.37:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded on panel-2 #F7FAFD: contrast 6.08:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded on ground #F3F7FB: contrast 5.92:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded on deep #E7EFF7: contrast 5.48:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable on panel #FFFFFF: contrast 6.94:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable on panel-2 #F7FAFD: contrast 6.62:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable on ground #F3F7FB: contrast 6.45:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable on deep #E7EFF7: contrast 5.98:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current pill on panel #FFFFFF: contrast 5.58:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current pill on panel-2 #F7FAFD: contrast 5.32:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current pill on ground #F3F7FB: contrast 5.17:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-current pill on deep #E7EFF7: contrast 4.82:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next pill on panel #FFFFFF: contrast 5.40:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next pill on panel-2 #F7FAFD: contrast 5.15:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next pill on ground #F3F7FB: contrast 5.04:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-next pill on deep #E7EFF7: contrast 4.67:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided pill on panel #FFFFFF: contrast 5.38:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided pill on panel-2 #F7FAFD: contrast 5.13:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided pill on ground #F3F7FB: contrast 5.02:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-undecided pill on deep #E7EFF7: contrast 4.66:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted pill on panel #FFFFFF: contrast 5.66:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted pill on panel-2 #F7FAFD: contrast 5.43:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted pill on ground #F3F7FB: contrast 5.27:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-uncommitted pill on deep #E7EFF7: contrast 4.92:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded pill on panel #FFFFFF: contrast 5.29:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded pill on panel-2 #F7FAFD: contrast 5.08:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded pill on ground #F3F7FB: contrast 4.94:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-excluded pill on deep #E7EFF7: contrast 4.60:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable pill on panel #FFFFFF: contrast 5.85:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable pill on panel-2 #F7FAFD: contrast 5.62:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable pill on ground #F3F7FB: contrast 5.47:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "light status-unavailable pill on deep #E7EFF7: contrast 5.10:1 meets 4.5:1"
+    },
+    {
+      "passed": true,
+      "check": "fonts/Saira-Variable.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/Saira-Variable.ttf: variable axes as recorded"
+    },
+    {
+      "passed": true,
+      "check": "fonts/Inter-Variable.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/Inter-Variable.ttf: variable axes as recorded"
+    },
+    {
+      "passed": true,
+      "check": "fonts/JetBrainsMono-Variable.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/JetBrainsMono-Variable.ttf: variable axes as recorded"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Saira-Variable.woff2: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Saira-Variable.woff2: variable axes as recorded"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Saira-Variable.woff2: WOFF2 with every table of fonts/Saira-Variable.ttf unchanged"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Saira-Variable.woff2: every glyph outline unchanged"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Inter-Variable.woff2: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Inter-Variable.woff2: variable axes as recorded"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Inter-Variable.woff2: WOFF2 with every table of fonts/Inter-Variable.ttf unchanged"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/Inter-Variable.woff2: every glyph outline unchanged"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/JetBrainsMono-Variable.woff2: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/JetBrainsMono-Variable.woff2: variable axes as recorded"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/JetBrainsMono-Variable.woff2: WOFF2 with every table of fonts/JetBrainsMono-Variable.ttf unchanged"
+    },
+    {
+      "passed": true,
+      "check": "fonts/web/JetBrainsMono-Variable.woff2: every glyph outline unchanged"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-Medium.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-Medium.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-Medium.ttf: Saira 106 Medium at weight 500"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-Medium.ttf: matches FreeType's rendering of the variable font at {'wght': 500, 'wdth': 106} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-SemiBold.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-SemiBold.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-SemiBold.ttf: Saira 106 SemiBold at weight 600"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira106-SemiBold.ttf: matches FreeType's rendering of the variable font at {'wght': 600, 'wdth': 106} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-Medium.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-Medium.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-Medium.ttf: Saira 125 Medium at weight 500"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-Medium.ttf: matches FreeType's rendering of the variable font at {'wght': 500, 'wdth': 125} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-SemiBold.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-SemiBold.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-SemiBold.ttf: Saira 125 SemiBold at weight 600"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Saira125-SemiBold.ttf: matches FreeType's rendering of the variable font at {'wght': 600, 'wdth': 125} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Regular.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Regular.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Regular.ttf: Inter Regular at weight 400"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Regular.ttf: matches FreeType's rendering of the variable font at {'opsz': 14, 'wght': 400} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Medium.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Medium.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Medium.ttf: Inter Medium at weight 500"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-Medium.ttf: matches FreeType's rendering of the variable font at {'opsz': 14, 'wght': 500} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-SemiBold.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-SemiBold.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-SemiBold.ttf: Inter SemiBold at weight 600"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/Inter-SemiBold.ttf: matches FreeType's rendering of the variable font at {'opsz': 14, 'wght': 600} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Regular.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Regular.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Regular.ttf: JetBrains Mono Regular at weight 400"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Regular.ttf: matches FreeType's rendering of the variable font at {'wght': 400} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Medium.ttf: present with its license"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Medium.ttf: static, with no variation tables or STAT"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Medium.ttf: JetBrains Mono Medium at weight 500"
+    },
+    {
+      "passed": true,
+      "check": "fonts/desktop/JetBrainsMono-Medium.ttf: matches FreeType's rendering of the variable font at {'wght': 500} with over 99% silhouette overlap"
+    },
+    {
+      "passed": true,
+      "check": "desktop/BriosaTheme.xaml: a WPF resource dictionary with unique keys"
+    },
+    {
+      "passed": true,
+      "check": "desktop/BriosaTheme.xaml: every color of both themes matches colors.json"
+    },
+    {
+      "passed": true,
+      "check": "desktop/BriosaTheme.xaml: BriosaDisplayFontFamily resolves to the Saira 106 desktop fonts"
+    },
+    {
+      "passed": true,
+      "check": "desktop/BriosaTheme.xaml: BriosaLabelFontFamily resolves to the Saira 125 desktop fonts"
+    },
+    {
+      "passed": true,
+      "check": "desktop/BriosaTheme.xaml: BriosaBodyFontFamily resolves to the Inter desktop fonts"
+    },
+    {
+      "passed": true,
+      "check": "desktop/BriosaTheme.xaml: BriosaMonoFontFamily resolves to the JetBrains Mono desktop fonts"
+    },
+    {
+      "passed": true,
+      "check": "qa/system-proof.png: system proof rendered"
     }
   ]
 }

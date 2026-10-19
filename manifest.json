@@ -1,6 +1,6 @@
 {
   "brand": "Briosa",
-  "version": "v2.1.0",
+  "version": "v2.2.0",
   "tagline": "SpatialAnalyzer integration, simplified.",
   "description": "An open-source gRPC bridge to the SpatialAnalyzer SDK.",
   "palette": {
@@ -8,7 +8,7 @@
     "clean-room": "#F3F7FB",
     "dark-ink": "#EAF3FF",
     "dark-ink-2": "#9DB3CF",
-    "dark-ink-3": "#7690B0",
+    "dark-ink-3": "#8199BA",
     "dark-jaw": "#00BAF1",
     "dark-point": "#FFFFFF",
     "dark-point-small": "#8BE7FF",
@@ -19,7 +19,14 @@
     "light-jaw": "#0096D6",
     "light-link": "#006DB6",
     "light-edge": "#D6E2EE",
-    "light-line": "#B9C9DB"
+    "light-line": "#B9C9DB",
+    "dark-tick": "#7690B0",
+    "dark-deep": "#071A33",
+    "dark-panel": "#0B2546",
+    "dark-panel-2": "#0E2C53",
+    "light-deep": "#E7EFF7",
+    "light-panel": "#FFFFFF",
+    "light-panel-2": "#F7FAFD"
   },
   "assets": [
     {
@@ -544,6 +551,257 @@
       "height": 441,
       "tagline": true,
       "cut": "large"
+    }
+  ],
+  "fonts": [
+    {
+      "file": "fonts/Saira-Variable.ttf",
+      "family": "Saira",
+      "format": "ttf",
+      "use": "source",
+      "axes": {
+        "wght": [
+          100,
+          100,
+          900
+        ],
+        "wdth": [
+          50,
+          100,
+          125
+        ]
+      },
+      "license": "fonts/Saira-OFL.txt"
+    },
+    {
+      "file": "fonts/Inter-Variable.ttf",
+      "family": "Inter",
+      "format": "ttf",
+      "use": "source",
+      "axes": {
+        "opsz": [
+          14,
+          14,
+          32
+        ],
+        "wght": [
+          100,
+          400,
+          900
+        ]
+      },
+      "license": "fonts/Inter-OFL.txt"
+    },
+    {
+      "file": "fonts/JetBrainsMono-Variable.ttf",
+      "family": "JetBrains Mono",
+      "format": "ttf",
+      "use": "source",
+      "axes": {
+        "wght": [
+          100,
+          400,
+          800
+        ]
+      },
+      "license": "fonts/JetBrainsMono-OFL.txt"
+    },
+    {
+      "file": "fonts/web/Saira-Variable.woff2",
+      "family": "Saira",
+      "format": "woff2",
+      "use": "web",
+      "source": "fonts/Saira-Variable.ttf",
+      "axes": {
+        "wght": [
+          100,
+          100,
+          900
+        ],
+        "wdth": [
+          50,
+          100,
+          125
+        ]
+      },
+      "license": "fonts/Saira-OFL.txt"
+    },
+    {
+      "file": "fonts/web/Inter-Variable.woff2",
+      "family": "Inter",
+      "format": "woff2",
+      "use": "web",
+      "source": "fonts/Inter-Variable.ttf",
+      "axes": {
+        "opsz": [
+          14,
+          14,
+          32
+        ],
+        "wght": [
+          100,
+          400,
+          900
+        ]
+      },
+      "license": "fonts/Inter-OFL.txt"
+    },
+    {
+      "file": "fonts/web/JetBrainsMono-Variable.woff2",
+      "family": "JetBrains Mono",
+      "format": "woff2",
+      "use": "web",
+      "source": "fonts/JetBrainsMono-Variable.ttf",
+      "axes": {
+        "wght": [
+          100,
+          400,
+          800
+        ]
+      },
+      "license": "fonts/JetBrainsMono-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Saira106-Medium.ttf",
+      "family": "Saira 106",
+      "style": "Medium",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Saira-Variable.ttf",
+      "location": {
+        "wght": 500,
+        "wdth": 106
+      },
+      "weight": 500,
+      "license": "fonts/Saira-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Saira106-SemiBold.ttf",
+      "family": "Saira 106",
+      "style": "SemiBold",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Saira-Variable.ttf",
+      "location": {
+        "wght": 600,
+        "wdth": 106
+      },
+      "weight": 600,
+      "license": "fonts/Saira-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Saira125-Medium.ttf",
+      "family": "Saira 125",
+      "style": "Medium",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Saira-Variable.ttf",
+      "location": {
+        "wght": 500,
+        "wdth": 125
+      },
+      "weight": 500,
+      "license": "fonts/Saira-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Saira125-SemiBold.ttf",
+      "family": "Saira 125",
+      "style": "SemiBold",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Saira-Variable.ttf",
+      "location": {
+        "wght": 600,
+        "wdth": 125
+      },
+      "weight": 600,
+      "license": "fonts/Saira-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Inter-Regular.ttf",
+      "family": "Inter",
+      "style": "Regular",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Inter-Variable.ttf",
+      "location": {
+        "opsz": 14,
+        "wght": 400
+      },
+      "weight": 400,
+      "license": "fonts/Inter-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Inter-Medium.ttf",
+      "family": "Inter",
+      "style": "Medium",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Inter-Variable.ttf",
+      "location": {
+        "opsz": 14,
+        "wght": 500
+      },
+      "weight": 500,
+      "license": "fonts/Inter-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/Inter-SemiBold.ttf",
+      "family": "Inter",
+      "style": "SemiBold",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/Inter-Variable.ttf",
+      "location": {
+        "opsz": 14,
+        "wght": 600
+      },
+      "weight": 600,
+      "license": "fonts/Inter-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/JetBrainsMono-Regular.ttf",
+      "family": "JetBrains Mono",
+      "style": "Regular",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/JetBrainsMono-Variable.ttf",
+      "location": {
+        "wght": 400
+      },
+      "weight": 400,
+      "license": "fonts/JetBrainsMono-OFL.txt"
+    },
+    {
+      "file": "fonts/desktop/JetBrainsMono-Medium.ttf",
+      "family": "JetBrains Mono",
+      "style": "Medium",
+      "format": "ttf",
+      "use": "desktop",
+      "source": "fonts/JetBrainsMono-Variable.ttf",
+      "location": {
+        "wght": 500
+      },
+      "weight": 500,
+      "license": "fonts/JetBrainsMono-OFL.txt"
+    }
+  ],
+  "system": [
+    {
+      "file": "colors.css",
+      "kind": "css-custom-properties"
+    },
+    {
+      "file": "colors.json",
+      "kind": "color-tokens"
+    },
+    {
+      "file": "fonts/web/fonts.css",
+      "kind": "css-font-faces"
+    },
+    {
+      "file": "desktop/BriosaTheme.xaml",
+      "kind": "wpf-resource-dictionary"
     }
   ]
 }

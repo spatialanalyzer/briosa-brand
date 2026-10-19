@@ -12,6 +12,7 @@ from fontTools.ttLib import TTFont
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT/'manifest.json').read_text(encoding='utf-8'))
+COLORS = json.loads((ROOT/'colors.json').read_text(encoding='utf-8'))
 WORDMARK = json.loads((ROOT/'source/wordmark.json').read_text(encoding='utf-8'))
 TAGLINE = MANIFEST['tagline']
 PALETTE = MANIFEST['palette']
@@ -28,6 +29,8 @@ def check(test, message):
 
 check(re.fullmatch(r'v[1-9][0-9]*(?:\.[0-9]+)*', VERSION) is not None, 'Brand version is a valid release tag')
 check(MANIFEST.get('version') == VERSION, 'Manifest version matches VERSION')
+check(COLORS.get('version') == VERSION, 'Color tokens version matches VERSION')
+check(VERSION in (ROOT/'desktop/BriosaTheme.xaml').read_text(encoding='utf-8'), 'Desktop theme names the brand version')
 
 for item in MANIFEST['assets']:
     file=ROOT/item['file']
@@ -143,6 +146,105 @@ for fg,bg,minimum in pairs:
     contrast_results.append({'foreground':fg,'background':bg,'ratio':round(ratio,2),'minimum':minimum})
     check(ratio>=minimum,f'{fg} on {bg}: contrast {ratio:.2f}:1 meets {minimum}:1')
 
+def over(color,alpha,ground):
+    """The solid color painted for `color` at `alpha` over an opaque ground; browsers blend in sRGB."""
+    return '#'+''.join(f'{round(alpha*int(color[i:i+2],16)+(1-alpha)*int(ground[i:i+2],16)):02X}' for i in (1,3,5))
+
+# Every text role on every surface of its theme, from the published tokens. A status pill
+# is its 10.5 px label in the status color on an 11% tint of that color over the surface.
+SURFACES=('panel','panel-2','ground','deep')
+TEXT=4.5
+text_matrix=[]
+deviation_use=[]
+for scheme,theme in COLORS['themes'].items():
+    grounds={surface:theme[surface] for surface in SURFACES}
+    roles=[(role,theme[role],0) for role in ('ink','ink-2','ink-3','link')]
+    roles+=[(f'status-{name}',color,0) for name,color in theme['status'].items()]
+    roles+=[(f'status-{name} pill',color,.11) for name,color in theme['status'].items()]
+    for role,color,alpha in roles:
+        ratios={surface:contrast(color,over(color,alpha,ground)) for surface,ground in grounds.items()}
+        text_matrix.append({'theme':scheme,'role':role,'color':color,'ratios':{s:round(r,2) for s,r in ratios.items()}})
+        for surface,ratio in ratios.items():
+            check(ratio>=TEXT,f'{scheme} {role} on {surface} {grounds[surface]}: contrast {ratio:.2f}:1 meets {TEXT}:1')
+    # Deviation steps are measured, not required: below 4.5:1 on any surface, a step is artwork only.
+    for step,color in theme['deviation'].items():
+        ratios={surface:contrast(color,ground) for surface,ground in grounds.items()}
+        deviation_use.append({'theme':scheme,'step':step,'color':color,'ratios':{s:round(r,2) for s,r in ratios.items()},
+                              'text':min(ratios.values())>=TEXT})
+
+# Fonts: the variable sources, their WOFF2 web builds and the static desktop instances.
+def outlines(font):
+    glyf=font['glyf']
+    shapes={}
+    for name in font.getGlyphOrder():
+        coordinates,ends,flags=glyf[name].getCoordinates(glyf)
+        shapes[name]=(list(coordinates),list(ends),[flag&1 for flag in flags])
+    return shapes
+
+def silhouette(path,text,axes=None,size=96):
+    face=ImageFont.truetype(str(path),size)
+    if axes:
+        face.set_variation_by_axes(axes)
+    canvas=Image.new('L',(size*len(text),2*size),0)
+    ImageDraw.Draw(canvas).text((size//2,size*3//2),text,font=face,fill=255,anchor='ls')
+    return np.asarray(canvas)>127
+
+SAMPLES={'Saira':'SpatialAnalyzer 0.9.0','Inter':'SpatialAnalyzer 0.9.0','JetBrains Mono':'Set(331.512) OK'}
+font_results=[]
+for entry in MANIFEST['fonts']:
+    path=ROOT/entry['file']
+    check(path.is_file() and (ROOT/entry['license']).is_file(),f'{entry["file"]}: present with its license')
+    font=TTFont(path)
+    record={'file':entry['file'],'use':entry['use'],'bytes':path.stat().st_size}
+    if entry['use'] in ('source','web'):
+        axes={axis.axisTag:[axis.minValue,axis.defaultValue,axis.maxValue] for axis in font['fvar'].axes}
+        check(axes==entry['axes'],f'{entry["file"]}: variable axes as recorded')
+    if entry['use']=='web':
+        source=TTFont(ROOT/entry['source'])
+        kept=[tag for tag in source.keys() if tag not in ('GlyphOrder','glyf','loca','head','DSIG')]
+        check(font.flavor=='woff2' and all(font.reader[tag]==source.reader[tag] for tag in kept),
+              f'{entry["file"]}: WOFF2 with every table of {entry["source"]} unchanged')
+        check(outlines(font)==outlines(source),f'{entry["file"]}: every glyph outline unchanged')
+    if entry['use']=='desktop':
+        names=font['name']
+        variable=TTFont(ROOT/entry['source'])
+        order=[axis.axisTag for axis in variable['fvar'].axes]
+        check(not {'fvar','gvar','avar','HVAR','MVAR','STAT'}&set(font.keys()),f'{entry["file"]}: static, with no variation tables or STAT')
+        check((names.getDebugName(16),names.getDebugName(17),font['OS/2'].usWeightClass)==(entry['family'],entry['style'],entry['weight']),
+              f'{entry["file"]}: {entry["family"]} {entry["style"]} at weight {entry["weight"]}')
+        family=next(name for name in SAMPLES if entry['family'].startswith(name))
+        static_mask=silhouette(path,SAMPLES[family])
+        variable_mask=silhouette(ROOT/entry['source'],SAMPLES[family],[entry['location'][tag] for tag in order])
+        overlap=float(np.logical_and(static_mask,variable_mask).sum()/np.logical_or(static_mask,variable_mask).sum())
+        record['silhouette_iou']=overlap
+        check(overlap>0.99,f'{entry["file"]}: matches FreeType\'s rendering of the variable font at {entry["location"]} with over 99% silhouette overlap')
+    font_results.append(record)
+
+# The desktop theme: every color matches the tokens and every family resolves to the desktop fonts.
+XAML=ROOT/'desktop/BriosaTheme.xaml'
+WPF,XAMLNS='{http://schemas.microsoft.com/winfx/2006/xaml/presentation}','{http://schemas.microsoft.com/winfx/2006/xaml}'
+theme_dictionary=ET.parse(XAML).getroot()
+keys=[element.get(XAMLNS+'Key') for element in theme_dictionary]
+check(theme_dictionary.tag==WPF+'ResourceDictionary' and None not in keys and len(keys)==len(set(keys)),
+      'desktop/BriosaTheme.xaml: a WPF resource dictionary with unique keys')
+def desktop_key(scheme,role):
+    return 'Briosa'+scheme.capitalize()+''.join(part[:1].upper()+part[1:] for part in role.split('-'))+'Color'
+expected={}
+for scheme,theme in COLORS['themes'].items():
+    for role,value in theme.items():
+        for name,color in (value.items() if isinstance(value,dict) else [(None,value)]):
+            expected[desktop_key(scheme,f'{role}-{name}' if name else role)]=color
+colors={element.get(XAMLNS+'Key'):element.text for element in theme_dictionary if element.tag==WPF+'Color'}
+check(colors==expected,'desktop/BriosaTheme.xaml: every color of both themes matches colors.json')
+desktop_families={entry['family'] for entry in MANIFEST['fonts'] if entry['use']=='desktop'}
+for element in theme_dictionary.iter(WPF+'FontFamily'):
+    location,family=element.text.split(',')[0].strip().split('#')
+    check((XAML.parent/location).resolve()==(ROOT/'fonts/desktop').resolve() and family in desktop_families,
+          f'desktop/BriosaTheme.xaml: {element.get(XAMLNS+"Key")} resolves to the {family} desktop fonts')
+
+system_proof=Image.open(ROOT/'qa/system-proof.png')
+check(system_proof.width>=1600 and np.asarray(system_proof.convert('L')).std()>0,'qa/system-proof.png: system proof rendered')
+
 # Proof: FreeType's Saira, the SVG outline, and where they differ.
 label=ImageFont.truetype(str(ROOT/'fonts/Inter-Variable.ttf'),22)
 w,h=outline.size
@@ -171,11 +273,27 @@ report={
     'wordmark_silhouette_iou':iou,
     'icon_legibility':icon_results,
     'contrast':contrast_results,
+    'text_contrast':text_matrix,
+    'deviation_use':deviation_use,
+    'fonts':font_results,
     'failures':failures,
     'checks':results,
 }
 (ROOT/'qa/validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 contrast_lines='\n'.join(f'| `{c["foreground"]}` | `{c["background"]}` | {c["ratio"]:.2f}:1 | {c["minimum"]}:1 |' for c in contrast_results)
+STEP_NAMES={'n2':'−2','n1':'−1','0':'0','p1':'+1','p2':'+2'}
+def matrix_table(scheme):
+    theme=COLORS['themes'][scheme]
+    head='| Token | Color | '+' | '.join(f'{s.replace("-"," ").capitalize()} `{theme[s]}`' for s in SURFACES)+' |'
+    rows=[f'| `{r["role"].removesuffix(" pill")}`{" pill" if r["role"].endswith(" pill") else ""} | `{r["color"]}` | '
+          +' | '.join(f'{r["ratios"][s]:.2f}:1' for s in SURFACES)+' |' for r in text_matrix if r['theme']==scheme]
+    return '\n'.join([head,'| --- | --- |'+' --- |'*len(SURFACES),*rows])
+deviation_lines='\n'.join(f'| {d["theme"].capitalize()} | {STEP_NAMES[d["step"]]} | `{d["color"]}` | '
+                          +' | '.join(f'{d["ratios"][s]:.2f}:1' for s in SURFACES)
+                          +f' | {"Text and artwork" if d["text"] else "Artwork only"} |' for d in deviation_use)
+desktop_fonts=[r for r in font_results if r['use']=='desktop']
+font_lines='\n'.join(f'| `{r["file"]}` | {r["use"].capitalize()} | {r["bytes"]:,} | '
+                     +(f'{r["silhouette_iou"]:.2%}' if 'silhouette_iou' in r else '') +' |' for r in font_results)
 summary=f'''# Asset Validation
 
 Status: **{report['status']}**. {report['checks_passed']} of {report['checks_total']} automated checks passed.
@@ -187,21 +305,53 @@ Brand version: **{VERSION}**.
 - The outlined wordmark achieved **{iou:.2%} silhouette overlap** with FreeType's own rendering of Saira at wght 600 and wdth 125, at the same size and letter positions, supersampled to avoid hinting. This checks the outlines against the font, not the design.
 - Icons at 16, 24, 32, 48, 64 and 128 px each show one solid jaw, clear of one solid beam. The measured point reaches its full color from 24 px; at 16 px it antialiases to a softer two-pixel dot, as the proof shows.
 - The ICO contains six frames and preserves the favicon's 16 px frame.
+- {len(text_matrix)} text roles were measured on all four surfaces of their theme: {len(text_matrix)*len(SURFACES)} pairs, each at least {TEXT}:1. The {sum(not d['text'] for d in deviation_use)} deviation steps below {TEXT}:1 on some surface are marked artwork only.
+- {len(font_results)} font files were checked. The WOFF2 web builds keep every table and glyph outline of their variable fonts. The {len(desktop_fonts)} static desktop instances have no variation or STAT tables, carry their WPF family, style and weight, and match FreeType's rendering of the variable font at their location with at least {min(r['silhouette_iou'] for r in desktop_fonts):.2%} silhouette overlap.
+- The desktop theme is a WPF resource dictionary whose colors match `colors.json` for both themes and whose type families resolve to the desktop fonts.
 - Exact slogan: **{TAGLINE}**
 
 ## Contrast
 
-WCAG 2 contrast of the palette's text and accent colors on their grounds.
+WCAG 2 contrast of every text-role token on every surface of its theme, measured from
+`colors.json`. A status pill is its 10.5 px label in the status color on an 11% tint of
+that color over the surface, as the browser paints it. Text needs {TEXT}:1.
+
+### Dark
+
+{matrix_table('dark')}
+
+### Light
+
+{matrix_table('light')}
+
+### Deviation Steps
+
+A step below {TEXT}:1 on any surface of its theme is artwork only: use it for data,
+gauges and rules, and set text in the matching status color.
+
+| Theme | Step | Color | Panel | Panel 2 | Ground | Deep | Use |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+{deviation_lines}
+
+### Brand Inks on Their Grounds
 
 | Foreground | Background | Ratio | Required |
 | --- | --- | --- | --- |
 {contrast_lines}
+
+## Fonts
+
+| File | Use | Bytes | Overlap with the variable font |
+| --- | --- | --- | --- |
+{font_lines}
 
 ## Visual Proofs
 
 ![Saira rendering versus the SVG outline](wordmark-outline-comparison.png)
 
 ![Color, inverse, black, white and small-size variants](variant-and-size-proof.png)
+
+![Status, inks and deviation steps on every surface, gauges, meters and the desktop fonts](system-proof.png)
 
 The generated preview and these proofs must also be visually inspected after a rebuild. Automated checks alone do not establish visual quality.
 
@@ -223,7 +373,8 @@ def packaged_files():
     patterns = {
         'logos': ['*.svg'], 'marks': ['*.svg'], 'suite': ['*.svg'],
         'icons': ['*.svg', '*.png', '*.ico'],
-        'fonts': ['*.ttf', '*.txt'],
+        'fonts': ['*.ttf', '*.txt'], 'fonts/web': ['*.woff2', '*.css'], 'fonts/desktop': ['*.ttf'],
+        'desktop': ['*.xaml'],
         'source': ['*.py', '*.cjs', '*.json', '*.txt', '*.md', '*.svg'],
         'qa': ['*.md', '*.json', '*.svg', '*.png'],
         'png/logos': ['*.png'], 'png/marks': ['*.png'], 'png/suite': ['*.png'],

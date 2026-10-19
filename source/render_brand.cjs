@@ -26,6 +26,7 @@ async function main(){
   }
   await sharp(path.join(root,'preview.svg'),{density:96}).png().toFile(path.join(root,'preview.png'));
   await sharp(path.join(root,'qa/wordmark-outline.svg'),{density:72}).png().toFile(path.join(root,'qa/wordmark-outline.png'));
+  await sharp(path.join(root,'qa/system-proof.svg'),{density:96}).png().toFile(path.join(root,'qa/system-proof.png'));
   // Proof sheet: the four themes on their grounds, then actual small-size pixels.
   const panels=[];
   const grounds={color:CLEAN_ROOM,inverse:VOID,black:'#FFFFFF',white:VOID};
